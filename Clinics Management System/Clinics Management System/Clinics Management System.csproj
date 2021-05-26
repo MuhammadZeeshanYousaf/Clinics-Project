@@ -42,11 +42,59 @@
     <Compile Include="App_Login.Designer.cs">
       <DependentUpon>App_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DctrAppoint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DctrAppoint.Designer.cs">
+      <DependentUpon>DctrAppoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DctrStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DctrStatus.Designer.cs">
+      <DependentUpon>DctrStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DctrInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DctrInfo.Designer.cs">
+      <DependentUpon>DctrInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unchecked_Pat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unchecked_Pat.Designer.cs">
+      <DependentUpon>Unchecked_Pat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room_Stat_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room_Stat_Info.Designer.cs">
+      <DependentUpon>Room_Stat_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pat_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pat_Report.Designer.cs">
+      <DependentUpon>Pat_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptionist.Designer.cs">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pat_Registr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pat_Registr.Designer.cs">
+      <DependentUpon>Pat_Registr.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -65,12 +113,36 @@
     <EmbeddedResource Include="App_Login.resx">
       <DependentUpon>App_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DctrAppoint.resx">
+      <DependentUpon>DctrAppoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DctrInfo.resx">
+      <DependentUpon>DctrInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DctrStatus.resx">
+      <DependentUpon>DctrStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pat_Report.resx">
+      <DependentUpon>Pat_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receptionist.resx">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pat_Registr.resx">
+      <DependentUpon>Pat_Registr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room_Stat_Info.resx">
+      <DependentUpon>Room_Stat_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unchecked_Pat.resx">
+      <DependentUpon>Unchecked_Pat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

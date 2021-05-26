@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clinics_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Receptionist : Form
     {
-        public Form1()
+        public Receptionist()
         {
             InitializeComponent();
         }
