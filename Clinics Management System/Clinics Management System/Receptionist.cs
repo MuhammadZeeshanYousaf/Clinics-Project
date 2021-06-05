@@ -41,5 +41,35 @@ namespace Clinics_Management_System
         {
 
         }
+
+        private void patients_manage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dctr_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewRprt_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Spcls_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoomNo_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoomNo_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

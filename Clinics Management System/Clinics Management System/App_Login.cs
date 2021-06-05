@@ -31,5 +31,10 @@ namespace Clinics_Management_System
         {
 
         }
+
+        private void App_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
