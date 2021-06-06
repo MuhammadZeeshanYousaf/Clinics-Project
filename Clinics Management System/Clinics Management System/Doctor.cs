@@ -16,5 +16,10 @@ namespace Clinics_Management_System
         {
             InitializeComponent();
         }
+
+        private void unchecked_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

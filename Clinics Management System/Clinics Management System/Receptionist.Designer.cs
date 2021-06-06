@@ -105,7 +105,7 @@ namespace Clinics_Management_System
             // 
             this.Hereucan_lbl.AutoSize = true;
             this.Hereucan_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hereucan_lbl.Location = new System.Drawing.Point(144, 106);
+            this.Hereucan_lbl.Location = new System.Drawing.Point(133, 107);
             this.Hereucan_lbl.Name = "Hereucan_lbl";
             this.Hereucan_lbl.Size = new System.Drawing.Size(140, 25);
             this.Hereucan_lbl.TabIndex = 5;
