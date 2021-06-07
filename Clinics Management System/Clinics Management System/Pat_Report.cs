@@ -26,5 +26,10 @@ namespace Clinics_Management_System
         {
 
         }
+
+        private void inchargheading_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,5 +21,20 @@ namespace Clinics_Management_System
         {
 
         }
+
+        private void submit_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PnameShow_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

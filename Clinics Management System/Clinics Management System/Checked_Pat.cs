@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Clinics_Management_System
 {
-    public partial class Doctor : Form
+    public partial class Checked_Pat : Form
     {
-        public Doctor()
+        public Checked_Pat()
         {
             InitializeComponent();
-        }
-
-        private void unchecked_btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void choices_lbl_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
