@@ -29,6 +29,7 @@ namespace Clinics_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Unchecked_Pat));
             this.PatQue_lbl = new System.Windows.Forms.Label();
             this.CNICShow_lstbox = new System.Windows.Forms.ListBox();
             this.NameShow_lstbox = new System.Windows.Forms.ListBox();
@@ -107,6 +108,7 @@ namespace Clinics_Management_System
             this.Controls.Add(this.NameShow_lstbox);
             this.Controls.Add(this.CNICShow_lstbox);
             this.Controls.Add(this.PatQue_lbl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Unchecked_Pat";
             this.Text = "Unchecked Patients";
             this.ResumeLayout(false);

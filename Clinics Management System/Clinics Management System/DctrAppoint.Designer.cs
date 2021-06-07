@@ -29,6 +29,7 @@ namespace Clinics_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DctrAppoint));
             this.AppointDoc_lbl = new System.Windows.Forms.Label();
             this.PCNIC_lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -160,6 +161,7 @@ namespace Clinics_Management_System
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PCNIC_lbl);
             this.Controls.Add(this.AppointDoc_lbl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DctrAppoint";
             this.Text = "Doctor Appointment";
             this.Load += new System.EventHandler(this.DctrAppoint_Load);

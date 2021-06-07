@@ -29,6 +29,7 @@ namespace Clinics_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DctrInfo));
             this.InfoHeading_lbl = new System.Windows.Forms.Label();
             this.name_lbl = new System.Windows.Forms.Label();
             this.age_lbl = new System.Windows.Forms.Label();
@@ -201,6 +202,7 @@ namespace Clinics_Management_System
             this.Controls.Add(this.age_lbl);
             this.Controls.Add(this.name_lbl);
             this.Controls.Add(this.InfoHeading_lbl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DctrInfo";
             this.Text = "Doctor Information";
             this.Load += new System.EventHandler(this.DctrInfo_Load);

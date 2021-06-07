@@ -21,5 +21,10 @@ namespace Clinics_Management_System
         {
 
         }
+
+        private void choices_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

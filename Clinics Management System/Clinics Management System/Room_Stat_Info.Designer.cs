@@ -29,6 +29,7 @@ namespace Clinics_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Room_Stat_Info));
             this.StatInfoHead_lbl = new System.Windows.Forms.Label();
             this.RoomNo_lbl = new System.Windows.Forms.Label();
             this.RoomDr_lbl = new System.Windows.Forms.Label();
@@ -154,6 +155,7 @@ namespace Clinics_Management_System
             this.Controls.Add(this.RoomDr_lbl);
             this.Controls.Add(this.RoomNo_lbl);
             this.Controls.Add(this.StatInfoHead_lbl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Room_Stat_Info";
             this.Text = "Room Status & Info";
             this.Load += new System.EventHandler(this.Room_Stat_Info_Load);

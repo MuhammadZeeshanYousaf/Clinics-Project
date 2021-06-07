@@ -29,21 +29,22 @@ namespace Clinics_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Dash_tab = new System.Windows.Forms.TabPage();
+            this.choices_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Recetionist_name_label = new System.Windows.Forms.Label();
             this.welcome_lbl = new System.Windows.Forms.Label();
             this.Patient_tab = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.unchecked_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.patients_manage = new System.Windows.Forms.Label();
             this.MarkPat_btn = new System.Windows.Forms.Button();
             this.CNIC_txtbox = new System.Windows.Forms.TextBox();
             this.PatCNIC_lbl = new System.Windows.Forms.Label();
             this.ChkdPat_btn = new System.Windows.Forms.Button();
-            this.Recetionist_name_label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.choices_lbl = new System.Windows.Forms.Label();
-            this.patients_manage = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.unchecked_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.profile_tab = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -78,6 +79,38 @@ namespace Clinics_Management_System
             this.Dash_tab.Text = "Dashboard";
             this.Dash_tab.UseVisualStyleBackColor = true;
             // 
+            // choices_lbl
+            // 
+            this.choices_lbl.AutoSize = true;
+            this.choices_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choices_lbl.Location = new System.Drawing.Point(203, 179);
+            this.choices_lbl.Name = "choices_lbl";
+            this.choices_lbl.Size = new System.Drawing.Size(249, 115);
+            this.choices_lbl.TabIndex = 7;
+            this.choices_lbl.Text = "- View your Patients\r\n\r\n- View Patients Queue\r\n\r\n(Just navigate through tabs)";
+            this.choices_lbl.Click += new System.EventHandler(this.choices_lbl_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(133, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Here you can:";
+            // 
+            // Recetionist_name_label
+            // 
+            this.Recetionist_name_label.AutoSize = true;
+            this.Recetionist_name_label.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Recetionist_name_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Recetionist_name_label.Location = new System.Drawing.Point(293, 34);
+            this.Recetionist_name_label.Name = "Recetionist_name_label";
+            this.Recetionist_name_label.Size = new System.Drawing.Size(85, 33);
+            this.Recetionist_name_label.TabIndex = 5;
+            this.Recetionist_name_label.Text = "Name";
+            // 
             // welcome_lbl
             // 
             this.welcome_lbl.AutoSize = true;
@@ -105,6 +138,49 @@ namespace Clinics_Management_System
             this.Patient_tab.TabIndex = 1;
             this.Patient_tab.Text = "Patients";
             this.Patient_tab.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(598, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // unchecked_btn
+            // 
+            this.unchecked_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.unchecked_btn.Location = new System.Drawing.Point(117, 303);
+            this.unchecked_btn.Name = "unchecked_btn";
+            this.unchecked_btn.Size = new System.Drawing.Size(175, 60);
+            this.unchecked_btn.TabIndex = 8;
+            this.unchecked_btn.Text = "UnChecked Patients";
+            this.unchecked_btn.UseVisualStyleBackColor = true;
+            this.unchecked_btn.Click += new System.EventHandler(this.unchecked_btn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(53, 250);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(578, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "___________________________________Pateints View_________________________________" +
+    "__";
+            // 
+            // patients_manage
+            // 
+            this.patients_manage.AutoSize = true;
+            this.patients_manage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.patients_manage.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patients_manage.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.patients_manage.Location = new System.Drawing.Point(7, 15);
+            this.patients_manage.Name = "patients_manage";
+            this.patients_manage.Size = new System.Drawing.Size(230, 37);
+            this.patients_manage.TabIndex = 6;
+            this.patients_manage.Text = "Manage Patients";
             // 
             // MarkPat_btn
             // 
@@ -144,81 +220,6 @@ namespace Clinics_Management_System
             this.ChkdPat_btn.Text = "Checked Patients";
             this.ChkdPat_btn.UseVisualStyleBackColor = true;
             // 
-            // Recetionist_name_label
-            // 
-            this.Recetionist_name_label.AutoSize = true;
-            this.Recetionist_name_label.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recetionist_name_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Recetionist_name_label.Location = new System.Drawing.Point(293, 34);
-            this.Recetionist_name_label.Name = "Recetionist_name_label";
-            this.Recetionist_name_label.Size = new System.Drawing.Size(85, 33);
-            this.Recetionist_name_label.TabIndex = 5;
-            this.Recetionist_name_label.Text = "Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Here you can:";
-            // 
-            // choices_lbl
-            // 
-            this.choices_lbl.AutoSize = true;
-            this.choices_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choices_lbl.Location = new System.Drawing.Point(200, 148);
-            this.choices_lbl.Name = "choices_lbl";
-            this.choices_lbl.Size = new System.Drawing.Size(249, 161);
-            this.choices_lbl.TabIndex = 7;
-            this.choices_lbl.Text = "- View your Patients\r\n\r\n- View Patients Queue\r\n\r\n- Manage your Profile\r\n\r\n(Just n" +
-    "avigate through tabs)";
-            // 
-            // patients_manage
-            // 
-            this.patients_manage.AutoSize = true;
-            this.patients_manage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.patients_manage.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patients_manage.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.patients_manage.Location = new System.Drawing.Point(7, 15);
-            this.patients_manage.Name = "patients_manage";
-            this.patients_manage.Size = new System.Drawing.Size(230, 37);
-            this.patients_manage.TabIndex = 6;
-            this.patients_manage.Text = "Manage Patients";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(53, 250);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(578, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "___________________________________Pateints View_________________________________" +
-    "__";
-            // 
-            // unchecked_btn
-            // 
-            this.unchecked_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.unchecked_btn.Location = new System.Drawing.Point(117, 303);
-            this.unchecked_btn.Name = "unchecked_btn";
-            this.unchecked_btn.Size = new System.Drawing.Size(175, 60);
-            this.unchecked_btn.TabIndex = 8;
-            this.unchecked_btn.Text = "UnChecked Patients";
-            this.unchecked_btn.UseVisualStyleBackColor = true;
-            this.unchecked_btn.Click += new System.EventHandler(this.unchecked_btn_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(598, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // profile_tab
             // 
             this.profile_tab.Controls.Add(this.label3);
@@ -248,6 +249,7 @@ namespace Clinics_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 450);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Doctor";
             this.Text = "Doctor";
             this.tabControl1.ResumeLayout(false);
