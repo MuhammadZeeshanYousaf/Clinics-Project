@@ -45,19 +45,15 @@ namespace Clinics_Management_System
             this.CNIC_txtbox = new System.Windows.Forms.TextBox();
             this.PatCNIC_lbl = new System.Windows.Forms.Label();
             this.ChkdPat_btn = new System.Windows.Forms.Button();
-            this.profile_tab = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Dash_tab.SuspendLayout();
             this.Patient_tab.SuspendLayout();
-            this.profile_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Dash_tab);
             this.tabControl1.Controls.Add(this.Patient_tab);
-            this.tabControl1.Controls.Add(this.profile_tab);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
             this.tabControl1.Name = "tabControl1";
@@ -220,29 +216,6 @@ namespace Clinics_Management_System
             this.ChkdPat_btn.Text = "Checked Patients";
             this.ChkdPat_btn.UseVisualStyleBackColor = true;
             // 
-            // profile_tab
-            // 
-            this.profile_tab.Controls.Add(this.label3);
-            this.profile_tab.Location = new System.Drawing.Point(4, 25);
-            this.profile_tab.Name = "profile_tab";
-            this.profile_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.profile_tab.Size = new System.Drawing.Size(679, 421);
-            this.profile_tab.TabIndex = 2;
-            this.profile_tab.Text = "Profile";
-            this.profile_tab.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(6, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 37);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Manage Profile";
-            // 
             // Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,8 +230,6 @@ namespace Clinics_Management_System
             this.Dash_tab.PerformLayout();
             this.Patient_tab.ResumeLayout(false);
             this.Patient_tab.PerformLayout();
-            this.profile_tab.ResumeLayout(false);
-            this.profile_tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -280,7 +251,5 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Button unchecked_btn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TabPage profile_tab;
-        private System.Windows.Forms.Label label3;
     }
 }
