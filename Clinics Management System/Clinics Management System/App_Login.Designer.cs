@@ -33,11 +33,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.IsReceptionist = new System.Windows.Forms.RadioButton();
             this.IsDoctor = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.password_txt = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.username_txt = new System.Windows.Forms.TextBox();
+            this.Login_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,11 +58,11 @@
             // 
             this.panel1.Controls.Add(this.IsReceptionist);
             this.panel1.Controls.Add(this.IsDoctor);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.password_txt);
             this.panel1.Controls.Add(this.Password);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Username);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.username_txt);
+            this.panel1.Controls.Add(this.Login_btn);
             this.panel1.Location = new System.Drawing.Point(12, 396);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(673, 167);
@@ -72,71 +72,73 @@
             // IsReceptionist
             // 
             this.IsReceptionist.AutoSize = true;
-            this.IsReceptionist.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsReceptionist.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsReceptionist.Location = new System.Drawing.Point(329, 79);
             this.IsReceptionist.Name = "IsReceptionist";
-            this.IsReceptionist.Size = new System.Drawing.Size(100, 19);
+            this.IsReceptionist.Size = new System.Drawing.Size(110, 20);
             this.IsReceptionist.TabIndex = 6;
             this.IsReceptionist.TabStop = true;
             this.IsReceptionist.Text = "RECEPTIONIST";
             this.IsReceptionist.UseVisualStyleBackColor = true;
+            this.IsReceptionist.CheckedChanged += new System.EventHandler(this.IsReceptionist_CheckedChanged);
             // 
             // IsDoctor
             // 
             this.IsDoctor.AutoSize = true;
-            this.IsDoctor.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsDoctor.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsDoctor.Location = new System.Drawing.Point(235, 79);
             this.IsDoctor.Name = "IsDoctor";
-            this.IsDoctor.Size = new System.Drawing.Size(71, 19);
+            this.IsDoctor.Size = new System.Drawing.Size(78, 20);
             this.IsDoctor.TabIndex = 5;
             this.IsDoctor.TabStop = true;
             this.IsDoctor.Text = "DOCTOR";
             this.IsDoctor.UseVisualStyleBackColor = true;
+            this.IsDoctor.CheckedChanged += new System.EventHandler(this.IsDoctor_CheckedChanged);
             // 
-            // textBox1
+            // password_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(420, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 4;
+            this.password_txt.Location = new System.Drawing.Point(434, 31);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(182, 20);
+            this.password_txt.TabIndex = 4;
             // 
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(347, 34);
+            this.Password.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(339, 32);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(67, 16);
+            this.Password.Size = new System.Drawing.Size(89, 19);
             this.Password.TabIndex = 3;
-            this.Password.Text = "Password";
+            this.Password.Text = "Password :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 34);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(32, 19);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Username";
+            this.label1.Text = "ID :";
             // 
-            // Username
+            // username_txt
             // 
-            this.Username.Location = new System.Drawing.Point(148, 33);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(172, 20);
-            this.Username.TabIndex = 1;
+            this.username_txt.Location = new System.Drawing.Point(122, 34);
+            this.username_txt.Name = "username_txt";
+            this.username_txt.Size = new System.Drawing.Size(191, 20);
+            this.username_txt.TabIndex = 1;
             // 
-            // button1
+            // Login_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(281, 116);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Log in";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Login_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_btn.Location = new System.Drawing.Point(281, 118);
+            this.Login_btn.Name = "Login_btn";
+            this.Login_btn.Size = new System.Drawing.Size(88, 33);
+            this.Login_btn.TabIndex = 0;
+            this.Login_btn.Text = "Log in";
+            this.Login_btn.UseVisualStyleBackColor = true;
+            this.Login_btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -171,11 +173,11 @@
 
         private System.Windows.Forms.Label Welcome_label;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Login_btn;
+        private System.Windows.Forms.TextBox password_txt;
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Username;
+        private System.Windows.Forms.TextBox username_txt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton IsReceptionist;
         private System.Windows.Forms.RadioButton IsDoctor;
