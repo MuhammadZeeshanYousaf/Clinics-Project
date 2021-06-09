@@ -34,10 +34,11 @@ namespace Clinics_Management_System
             this.DrSpec_lbl = new System.Windows.Forms.Label();
             this.DrName_lbl = new System.Windows.Forms.Label();
             this.Status_lbl = new System.Windows.Forms.Label();
-            this.CNICshow_lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.NoPat_rbtn = new System.Windows.Forms.RadioButton();
+            this.HavePat_rbtn = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // DctrStat_lbl
@@ -83,17 +84,6 @@ namespace Clinics_Management_System
             this.Status_lbl.TabIndex = 3;
             this.Status_lbl.Text = "Status :";
             // 
-            // CNICshow_lbl
-            // 
-            this.CNICshow_lbl.AutoSize = true;
-            this.CNICshow_lbl.BackColor = System.Drawing.Color.White;
-            this.CNICshow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.CNICshow_lbl.Location = new System.Drawing.Point(325, 234);
-            this.CNICshow_lbl.Name = "CNICshow_lbl";
-            this.CNICshow_lbl.Size = new System.Drawing.Size(203, 23);
-            this.CNICshow_lbl.TabIndex = 9;
-            this.CNICshow_lbl.Text = "available / unavailable";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -126,15 +116,40 @@ namespace Clinics_Management_System
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // NoPat_rbtn
+            // 
+            this.NoPat_rbtn.AutoSize = true;
+            this.NoPat_rbtn.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.NoPat_rbtn.Location = new System.Drawing.Point(330, 261);
+            this.NoPat_rbtn.Name = "NoPat_rbtn";
+            this.NoPat_rbtn.Size = new System.Drawing.Size(61, 23);
+            this.NoPat_rbtn.TabIndex = 14;
+            this.NoPat_rbtn.TabStop = true;
+            this.NoPat_rbtn.Text = "Free";
+            this.NoPat_rbtn.UseVisualStyleBackColor = true;
+            // 
+            // HavePat_rbtn
+            // 
+            this.HavePat_rbtn.AutoSize = true;
+            this.HavePat_rbtn.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.HavePat_rbtn.Location = new System.Drawing.Point(330, 232);
+            this.HavePat_rbtn.Name = "HavePat_rbtn";
+            this.HavePat_rbtn.Size = new System.Drawing.Size(62, 23);
+            this.HavePat_rbtn.TabIndex = 13;
+            this.HavePat_rbtn.TabStop = true;
+            this.HavePat_rbtn.Text = "Busy";
+            this.HavePat_rbtn.UseVisualStyleBackColor = true;
+            // 
             // DrStatHead_lbl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 389);
+            this.Controls.Add(this.NoPat_rbtn);
+            this.Controls.Add(this.HavePat_rbtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CNICshow_lbl);
             this.Controls.Add(this.Status_lbl);
             this.Controls.Add(this.DrName_lbl);
             this.Controls.Add(this.DrSpec_lbl);
@@ -154,9 +169,10 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label DrSpec_lbl;
         private System.Windows.Forms.Label DrName_lbl;
         private System.Windows.Forms.Label Status_lbl;
-        private System.Windows.Forms.Label CNICshow_lbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton NoPat_rbtn;
+        private System.Windows.Forms.RadioButton HavePat_rbtn;
     }
 }

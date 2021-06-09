@@ -45,11 +45,11 @@ namespace Clinics_Management_System
             this.PatQue_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PatQue_lbl.Font = new System.Drawing.Font("Bahnschrift SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.PatQue_lbl.ForeColor = System.Drawing.Color.Navy;
-            this.PatQue_lbl.Location = new System.Drawing.Point(146, 40);
+            this.PatQue_lbl.Location = new System.Drawing.Point(190, 40);
             this.PatQue_lbl.Name = "PatQue_lbl";
-            this.PatQue_lbl.Size = new System.Drawing.Size(401, 41);
+            this.PatQue_lbl.Size = new System.Drawing.Size(301, 41);
             this.PatQue_lbl.TabIndex = 0;
-            this.PatQue_lbl.Text = "Unchecked Patients Queue";
+            this.PatQue_lbl.Text = "Unchecked Patients";
             // 
             // CNICShow_lstbox
             // 

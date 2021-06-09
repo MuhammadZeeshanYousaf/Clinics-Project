@@ -90,11 +90,11 @@
             this.PatQue_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PatQue_lbl.Font = new System.Drawing.Font("Bahnschrift SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.PatQue_lbl.ForeColor = System.Drawing.Color.Navy;
-            this.PatQue_lbl.Location = new System.Drawing.Point(136, 36);
+            this.PatQue_lbl.Location = new System.Drawing.Point(201, 36);
             this.PatQue_lbl.Name = "PatQue_lbl";
-            this.PatQue_lbl.Size = new System.Drawing.Size(366, 41);
+            this.PatQue_lbl.Size = new System.Drawing.Size(266, 41);
             this.PatQue_lbl.TabIndex = 15;
-            this.PatQue_lbl.Text = "Checked Patients Queue";
+            this.PatQue_lbl.Text = "Checked Patients";
             // 
             // Checked_Pat
             // 

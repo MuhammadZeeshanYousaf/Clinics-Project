@@ -80,7 +80,7 @@ namespace Clinics_Management_System
             // 
             this.probheading_lbl.AutoSize = true;
             this.probheading_lbl.Font = new System.Drawing.Font("Bahnschrift", 13.5F);
-            this.probheading_lbl.Location = new System.Drawing.Point(104, 202);
+            this.probheading_lbl.Location = new System.Drawing.Point(104, 199);
             this.probheading_lbl.Name = "probheading_lbl";
             this.probheading_lbl.Size = new System.Drawing.Size(208, 22);
             this.probheading_lbl.TabIndex = 3;
@@ -90,11 +90,11 @@ namespace Clinics_Management_System
             // 
             this.inchargheading_lbl.AutoSize = true;
             this.inchargheading_lbl.Font = new System.Drawing.Font("Bahnschrift", 13.5F);
-            this.inchargheading_lbl.Location = new System.Drawing.Point(152, 291);
+            this.inchargheading_lbl.Location = new System.Drawing.Point(141, 291);
             this.inchargheading_lbl.Name = "inchargheading_lbl";
-            this.inchargheading_lbl.Size = new System.Drawing.Size(160, 22);
+            this.inchargheading_lbl.Size = new System.Drawing.Size(171, 22);
             this.inchargheading_lbl.TabIndex = 4;
-            this.inchargheading_lbl.Text = "Doctors Incharge :";
+            this.inchargheading_lbl.Text = "Appointed Doctors :";
             this.inchargheading_lbl.Click += new System.EventHandler(this.inchargheading_lbl_Click);
             // 
             // appointheading_lbl
@@ -111,7 +111,7 @@ namespace Clinics_Management_System
             // close_btn
             // 
             this.close_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.close_btn.Location = new System.Drawing.Point(570, 388);
+            this.close_btn.Location = new System.Drawing.Point(570, 400);
             this.close_btn.Name = "close_btn";
             this.close_btn.Size = new System.Drawing.Size(98, 42);
             this.close_btn.TabIndex = 6;
@@ -154,7 +154,7 @@ namespace Clinics_Management_System
             this.ProblemShow_lbl.AutoSize = true;
             this.ProblemShow_lbl.BackColor = System.Drawing.Color.White;
             this.ProblemShow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
-            this.ProblemShow_lbl.Location = new System.Drawing.Point(318, 202);
+            this.ProblemShow_lbl.Location = new System.Drawing.Point(318, 199);
             this.ProblemShow_lbl.Name = "ProblemShow_lbl";
             this.ProblemShow_lbl.Size = new System.Drawing.Size(78, 22);
             this.ProblemShow_lbl.TabIndex = 10;
@@ -175,7 +175,7 @@ namespace Clinics_Management_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 442);
+            this.ClientSize = new System.Drawing.Size(680, 454);
             this.Controls.Add(this.appointShow_lbl);
             this.Controls.Add(this.ProblemShow_lbl);
             this.Controls.Add(this.PnameShow_lbl);
