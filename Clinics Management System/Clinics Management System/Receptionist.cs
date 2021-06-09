@@ -35,7 +35,7 @@ namespace Clinics_Management_System
             //open the connection
             connection.Open();
             //make query
-            String query = "SELECT patient_name FROM patients WHERE patient_cnic=\'" + patient_cnic + "\';";
+            String query = "SELECT patient_name FROM patients WHERE patient_cnic='" + patient_cnic + "';";
             //pass query to SqlCommand
             SqlCommand cmd = new SqlCommand(query, connection);
             //Execute the query
@@ -83,9 +83,40 @@ namespace Clinics_Management_System
 
         }
 
+        //Doctor info button clicked
         private void button2_Click(object sender, EventArgs e)
         {
+            string specialization = Spec_combobox.Text;
+            if(specialization != null)
+            {
+                connection.Open();
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT doctor_name, doctor_age, doctor_room, specialization_details FROM Doctors WHERE specialization = '"+specialization+"';";
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                dataReader.Read();
+                if(dataReader.HasRows)
+                {
+                    string doctor_name = dataReader[0].ToString();
+                    string doctor_age = dataReader[1].ToString();
+                    string doctor_room = dataReader[2].ToString();
+                    string doctor_details = dataReader[3].ToString();
 
+                    dataReader.Close();
+                    connection.Close();
+                    new DctrInfo(doctor_name, specialization, doctor_age, doctor_room, doctor_details).Show();
+                }
+                else
+                {
+                    MessageBox.Show("Doctor does not Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataReader.Close();
+                    connection.Close();
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Enter Doctor Specialization!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void patients_manage_Click(object sender, EventArgs e)

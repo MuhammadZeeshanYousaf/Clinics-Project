@@ -58,7 +58,7 @@ namespace Clinics_Management_System
             // 
             this.DrSpec_lbl.AutoSize = true;
             this.DrSpec_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.DrSpec_lbl.Location = new System.Drawing.Point(154, 182);
+            this.DrSpec_lbl.Location = new System.Drawing.Point(154, 179);
             this.DrSpec_lbl.Name = "DrSpec_lbl";
             this.DrSpec_lbl.Size = new System.Drawing.Size(165, 23);
             this.DrSpec_lbl.TabIndex = 1;
@@ -100,7 +100,7 @@ namespace Clinics_Management_System
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.label2.Location = new System.Drawing.Point(325, 182);
+            this.label2.Location = new System.Drawing.Point(325, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 23);
             this.label2.TabIndex = 11;
@@ -115,6 +115,7 @@ namespace Clinics_Management_System
             this.button1.TabIndex = 12;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NoPat_rbtn
             // 

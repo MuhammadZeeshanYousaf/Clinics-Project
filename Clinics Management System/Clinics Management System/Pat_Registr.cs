@@ -45,7 +45,7 @@ namespace Clinics_Management_System
         {
             //get registeration credentials from text boxes
             string patient_name = pat_name_txtbox.Text;
-            int patient_age = int.Parse(pat_age_txtbox.Text);
+            int patient_age = int.Parse(pat_age_txtbox.Text.ToString());
             string pat_gender = pat_gender_comboBox.Text;
 
             if (patient_name == null || patient_age == 0 || pat_gender == null)
@@ -58,7 +58,7 @@ namespace Clinics_Management_System
             connection.Open();
             //pass query and connection to the SqlCommand to Execute
             SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "INSERT INTO patients (patient_cnic, patient_name, patient_age, gender) VALUES (" + patient_cnic + ", \'" + patient_name + "\', " + patient_age + ", \'" + pat_gender + "\')";
+            cmd.CommandText = "INSERT INTO patients VALUES ('" + patient_cnic + "', '" + patient_name + "', '" + patient_age + "', '" + pat_gender + "');";
 
             //cmd.CommandText = "INSERT INTO patients VALUES(@patient_cnic, @patient_name, @patient_age, @pat_gender)";
             /*

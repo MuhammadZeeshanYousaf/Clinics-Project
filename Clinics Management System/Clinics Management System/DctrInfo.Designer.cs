@@ -37,10 +37,12 @@ namespace Clinics_Management_System
             this.room_lbl = new System.Windows.Forms.Label();
             this.years_lbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dr_name_label = new System.Windows.Forms.Label();
+            this.dr_spec_label = new System.Windows.Forms.Label();
+            this.dr_age_label = new System.Windows.Forms.Label();
+            this.dr_room_label = new System.Windows.Forms.Label();
+            this.spec_details_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InfoHeading_lbl
@@ -60,7 +62,7 @@ namespace Clinics_Management_System
             // 
             this.name_lbl.AutoSize = true;
             this.name_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.name_lbl.Location = new System.Drawing.Point(193, 123);
+            this.name_lbl.Location = new System.Drawing.Point(206, 114);
             this.name_lbl.Name = "name_lbl";
             this.name_lbl.Size = new System.Drawing.Size(128, 23);
             this.name_lbl.TabIndex = 1;
@@ -70,7 +72,7 @@ namespace Clinics_Management_System
             // 
             this.age_lbl.AutoSize = true;
             this.age_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.age_lbl.Location = new System.Drawing.Point(210, 223);
+            this.age_lbl.Location = new System.Drawing.Point(223, 214);
             this.age_lbl.Name = "age_lbl";
             this.age_lbl.Size = new System.Drawing.Size(111, 23);
             this.age_lbl.TabIndex = 2;
@@ -80,7 +82,7 @@ namespace Clinics_Management_System
             // 
             this.spcl_lbl.AutoSize = true;
             this.spcl_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.spcl_lbl.Location = new System.Drawing.Point(159, 175);
+            this.spcl_lbl.Location = new System.Drawing.Point(172, 166);
             this.spcl_lbl.Name = "spcl_lbl";
             this.spcl_lbl.Size = new System.Drawing.Size(162, 23);
             this.spcl_lbl.TabIndex = 3;
@@ -90,7 +92,7 @@ namespace Clinics_Management_System
             // 
             this.room_lbl.AutoSize = true;
             this.room_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.room_lbl.Location = new System.Drawing.Point(194, 272);
+            this.room_lbl.Location = new System.Drawing.Point(207, 263);
             this.room_lbl.Name = "room_lbl";
             this.room_lbl.Size = new System.Drawing.Size(127, 23);
             this.room_lbl.TabIndex = 4;
@@ -100,17 +102,17 @@ namespace Clinics_Management_System
             // years_lbl
             // 
             this.years_lbl.AutoSize = true;
-            this.years_lbl.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.years_lbl.Location = new System.Drawing.Point(370, 226);
+            this.years_lbl.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.years_lbl.Location = new System.Drawing.Point(383, 217);
             this.years_lbl.Name = "years_lbl";
-            this.years_lbl.Size = new System.Drawing.Size(50, 19);
+            this.years_lbl.Size = new System.Drawing.Size(52, 21);
             this.years_lbl.TabIndex = 11;
             this.years_lbl.Text = "years";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.button1.Location = new System.Drawing.Point(572, 380);
+            this.button1.Location = new System.Drawing.Point(572, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 42);
             this.button1.TabIndex = 13;
@@ -118,59 +120,84 @@ namespace Clinics_Management_System
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // dr_name_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.label1.Location = new System.Drawing.Point(327, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 23);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "name";
+            this.dr_name_label.AutoSize = true;
+            this.dr_name_label.BackColor = System.Drawing.Color.White;
+            this.dr_name_label.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.dr_name_label.Location = new System.Drawing.Point(340, 114);
+            this.dr_name_label.Name = "dr_name_label";
+            this.dr_name_label.Size = new System.Drawing.Size(57, 23);
+            this.dr_name_label.TabIndex = 14;
+            this.dr_name_label.Text = "name";
+            // 
+            // dr_spec_label
+            // 
+            this.dr_spec_label.AutoSize = true;
+            this.dr_spec_label.BackColor = System.Drawing.Color.White;
+            this.dr_spec_label.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.dr_spec_label.Location = new System.Drawing.Point(340, 166);
+            this.dr_spec_label.Name = "dr_spec_label";
+            this.dr_spec_label.Size = new System.Drawing.Size(93, 23);
+            this.dr_spec_label.TabIndex = 15;
+            this.dr_spec_label.Text = "Specialist";
+            // 
+            // dr_age_label
+            // 
+            this.dr_age_label.AutoSize = true;
+            this.dr_age_label.BackColor = System.Drawing.Color.White;
+            this.dr_age_label.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.dr_age_label.Location = new System.Drawing.Point(340, 216);
+            this.dr_age_label.Name = "dr_age_label";
+            this.dr_age_label.Size = new System.Drawing.Size(40, 23);
+            this.dr_age_label.TabIndex = 16;
+            this.dr_age_label.Text = "age";
+            // 
+            // dr_room_label
+            // 
+            this.dr_room_label.AutoSize = true;
+            this.dr_room_label.BackColor = System.Drawing.Color.White;
+            this.dr_room_label.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.dr_room_label.Location = new System.Drawing.Point(340, 263);
+            this.dr_room_label.Name = "dr_room_label";
+            this.dr_room_label.Size = new System.Drawing.Size(54, 23);
+            this.dr_room_label.TabIndex = 17;
+            this.dr_room_label.Text = "room";
+            // 
+            // spec_details_label
+            // 
+            this.spec_details_label.AutoSize = true;
+            this.spec_details_label.BackColor = System.Drawing.Color.White;
+            this.spec_details_label.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spec_details_label.Location = new System.Drawing.Point(23, 360);
+            this.spec_details_label.Name = "spec_details_label";
+            this.spec_details_label.Size = new System.Drawing.Size(55, 18);
+            this.spec_details_label.TabIndex = 18;
+            this.spec_details_label.Text = "Details";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.label2.Location = new System.Drawing.Point(327, 175);
+            this.label2.CausesValidation = false;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(76, 312);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 23);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Specialist";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.label3.Location = new System.Drawing.Point(327, 225);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 23);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "age";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.label4.Location = new System.Drawing.Point(327, 272);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 23);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "room";
+            this.label2.Size = new System.Drawing.Size(518, 19);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "_________________________________Details_________________________________";
             // 
             // DctrInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 434);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(682, 493);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.spec_details_label);
+            this.Controls.Add(this.dr_room_label);
+            this.Controls.Add(this.dr_age_label);
+            this.Controls.Add(this.dr_spec_label);
+            this.Controls.Add(this.dr_name_label);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.years_lbl);
             this.Controls.Add(this.room_lbl);
@@ -196,9 +223,11 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label room_lbl;
         private System.Windows.Forms.Label years_lbl;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label dr_name_label;
+        private System.Windows.Forms.Label dr_spec_label;
+        private System.Windows.Forms.Label dr_age_label;
+        private System.Windows.Forms.Label dr_room_label;
+        private System.Windows.Forms.Label spec_details_label;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }

@@ -47,7 +47,7 @@ namespace Clinics_Management_System
             this.manage_doctors = new System.Windows.Forms.Label();
             this.DctrInfo_btn = new System.Windows.Forms.Button();
             this.DctrStat_btn = new System.Windows.Forms.Button();
-            this.Spcls_combo = new System.Windows.Forms.ComboBox();
+            this.Spec_combobox = new System.Windows.Forms.ComboBox();
             this.DctrSp_lbl = new System.Windows.Forms.Label();
             this.Room_tab = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -219,7 +219,7 @@ namespace Clinics_Management_System
             this.Doctor_tab.Controls.Add(this.manage_doctors);
             this.Doctor_tab.Controls.Add(this.DctrInfo_btn);
             this.Doctor_tab.Controls.Add(this.DctrStat_btn);
-            this.Doctor_tab.Controls.Add(this.Spcls_combo);
+            this.Doctor_tab.Controls.Add(this.Spec_combobox);
             this.Doctor_tab.Controls.Add(this.DctrSp_lbl);
             this.Doctor_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Doctor_tab.Location = new System.Drawing.Point(4, 25);
@@ -262,22 +262,25 @@ namespace Clinics_Management_System
             this.DctrStat_btn.Text = "Doctor Status";
             this.DctrStat_btn.UseVisualStyleBackColor = true;
             // 
-            // Spcls_combo
+            // Spec_combobox
             // 
-            this.Spcls_combo.FormattingEnabled = true;
-            this.Spcls_combo.Items.AddRange(new object[] {
-            "Gynecologist",
-            "Surgeon",
-            "Psychiatrist",
+            this.Spec_combobox.FormattingEnabled = true;
+            this.Spec_combobox.Items.AddRange(new object[] {
+            "Allergist",
             "Cardiologist",
             "Dermatologist",
-            "Dentist",
-            "Neurologist"});
-            this.Spcls_combo.Location = new System.Drawing.Point(300, 137);
-            this.Spcls_combo.Name = "Spcls_combo";
-            this.Spcls_combo.Size = new System.Drawing.Size(238, 24);
-            this.Spcls_combo.TabIndex = 1;
-            this.Spcls_combo.SelectedIndexChanged += new System.EventHandler(this.Spcls_combo_SelectedIndexChanged);
+            "Nephrologist",
+            "Neurologist",
+            "Ophthalmologist",
+            "Otolaryngologist",
+            "Psychiatrist",
+            "Radiologist",
+            "Surgeon"});
+            this.Spec_combobox.Location = new System.Drawing.Point(300, 137);
+            this.Spec_combobox.Name = "Spec_combobox";
+            this.Spec_combobox.Size = new System.Drawing.Size(238, 24);
+            this.Spec_combobox.TabIndex = 1;
+            this.Spec_combobox.SelectedIndexChanged += new System.EventHandler(this.Spcls_combo_SelectedIndexChanged);
             // 
             // DctrSp_lbl
             // 
@@ -385,7 +388,7 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label DctrSp_lbl;
         private System.Windows.Forms.Button DctrInfo_btn;
         private System.Windows.Forms.Button DctrStat_btn;
-        private System.Windows.Forms.ComboBox Spcls_combo;
+        private System.Windows.Forms.ComboBox Spec_combobox;
         private System.Windows.Forms.Button StsInfo_btn;
         private System.Windows.Forms.TextBox RoomNo_txtbox;
         private System.Windows.Forms.Label RoomNo_lbl;

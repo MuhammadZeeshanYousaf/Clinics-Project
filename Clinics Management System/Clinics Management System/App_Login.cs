@@ -104,6 +104,7 @@ namespace Clinics_Management_System
                 string result_password = dataReader[1].ToString();
                 string result_doctor_name = dataReader[2].ToString();
 
+                dataReader.Close();
                 connection.Close();
                 //if password match then log in that DOCTOR
                 if (password == result_password)
@@ -119,6 +120,7 @@ namespace Clinics_Management_System
             else
                 MessageBox.Show("Username / ID is Incorrect!");
             //Close the connection
+            dataReader.Close();
             connection.Close();
         }
 
@@ -160,6 +162,11 @@ namespace Clinics_Management_System
 
         private void IsReceptionist_CheckedChanged(object sender, EventArgs e)
         {
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
