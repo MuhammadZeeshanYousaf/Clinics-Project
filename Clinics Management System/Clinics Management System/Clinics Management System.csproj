@@ -72,6 +72,7 @@
     <Compile Include="Doctor.Designer.cs">
       <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driver.cs" />
     <Compile Include="Unchecked_Pat.cs">
       <SubType>Form</SubType>
     </Compile>
