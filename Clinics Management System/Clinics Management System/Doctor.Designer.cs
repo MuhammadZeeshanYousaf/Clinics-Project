@@ -101,7 +101,7 @@ namespace Clinics_Management_System
             this.Recetionist_name_label.AutoSize = true;
             this.Recetionist_name_label.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recetionist_name_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Recetionist_name_label.Location = new System.Drawing.Point(293, 34);
+            this.Recetionist_name_label.Location = new System.Drawing.Point(301, 34);
             this.Recetionist_name_label.Name = "Recetionist_name_label";
             this.Recetionist_name_label.Size = new System.Drawing.Size(85, 33);
             this.Recetionist_name_label.TabIndex = 5;
@@ -113,9 +113,9 @@ namespace Clinics_Management_System
             this.welcome_lbl.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold);
             this.welcome_lbl.Location = new System.Drawing.Point(78, 32);
             this.welcome_lbl.Name = "welcome_lbl";
-            this.welcome_lbl.Size = new System.Drawing.Size(220, 35);
+            this.welcome_lbl.Size = new System.Drawing.Size(228, 35);
             this.welcome_lbl.TabIndex = 0;
-            this.welcome_lbl.Text = "WelcomeDoctor";
+            this.welcome_lbl.Text = "Welcome Doctor";
             // 
             // Patient_tab
             // 
