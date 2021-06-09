@@ -36,12 +36,11 @@ namespace Clinics_Management_System
             this.Prblm_lbl = new System.Windows.Forms.Label();
             this.DctrIncharge_lbl = new System.Windows.Forms.Label();
             this.Reg_btn = new System.Windows.Forms.Button();
-            this.name_txtbox = new System.Windows.Forms.TextBox();
-            this.CNIC_txtbox = new System.Windows.Forms.TextBox();
-            this.Prblm_txtbox = new System.Windows.Forms.TextBox();
-            this.incharge_combobox = new System.Windows.Forms.ComboBox();
+            this.pat_name_txtbox = new System.Windows.Forms.TextBox();
+            this.pat_age_txtbox = new System.Windows.Forms.TextBox();
+            this.pat_gender_comboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cninc_show_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PatReg_lbl
@@ -60,7 +59,7 @@ namespace Clinics_Management_System
             // 
             this.PCNIC_lbl.AutoSize = true;
             this.PCNIC_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.PCNIC_lbl.Location = new System.Drawing.Point(152, 176);
+            this.PCNIC_lbl.Location = new System.Drawing.Point(150, 121);
             this.PCNIC_lbl.Name = "PCNIC_lbl";
             this.PCNIC_lbl.Size = new System.Drawing.Size(126, 23);
             this.PCNIC_lbl.TabIndex = 1;
@@ -70,7 +69,7 @@ namespace Clinics_Management_System
             // 
             this.Pname_lbl.AutoSize = true;
             this.Pname_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.Pname_lbl.Location = new System.Drawing.Point(145, 125);
+            this.Pname_lbl.Location = new System.Drawing.Point(145, 172);
             this.Pname_lbl.Name = "Pname_lbl";
             this.Pname_lbl.Size = new System.Drawing.Size(133, 23);
             this.Pname_lbl.TabIndex = 2;
@@ -101,49 +100,42 @@ namespace Clinics_Management_System
             // Reg_btn
             // 
             this.Reg_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.Reg_btn.Location = new System.Drawing.Point(236, 340);
+            this.Reg_btn.Location = new System.Drawing.Point(282, 340);
             this.Reg_btn.Name = "Reg_btn";
             this.Reg_btn.Size = new System.Drawing.Size(118, 49);
             this.Reg_btn.TabIndex = 5;
             this.Reg_btn.Text = "Register";
             this.Reg_btn.UseVisualStyleBackColor = true;
+            this.Reg_btn.Click += new System.EventHandler(this.Reg_btn_Click);
             // 
-            // name_txtbox
+            // pat_name_txtbox
             // 
-            this.name_txtbox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.name_txtbox.Location = new System.Drawing.Point(284, 122);
-            this.name_txtbox.Name = "name_txtbox";
-            this.name_txtbox.Size = new System.Drawing.Size(246, 30);
-            this.name_txtbox.TabIndex = 6;
+            this.pat_name_txtbox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
+            this.pat_name_txtbox.Location = new System.Drawing.Point(284, 169);
+            this.pat_name_txtbox.Name = "pat_name_txtbox";
+            this.pat_name_txtbox.Size = new System.Drawing.Size(246, 30);
+            this.pat_name_txtbox.TabIndex = 6;
             // 
-            // CNIC_txtbox
+            // pat_age_txtbox
             // 
-            this.CNIC_txtbox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.CNIC_txtbox.Location = new System.Drawing.Point(284, 173);
-            this.CNIC_txtbox.Name = "CNIC_txtbox";
-            this.CNIC_txtbox.Size = new System.Drawing.Size(246, 30);
-            this.CNIC_txtbox.TabIndex = 7;
+            this.pat_age_txtbox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
+            this.pat_age_txtbox.Location = new System.Drawing.Point(284, 225);
+            this.pat_age_txtbox.Name = "pat_age_txtbox";
+            this.pat_age_txtbox.Size = new System.Drawing.Size(70, 30);
+            this.pat_age_txtbox.TabIndex = 8;
             // 
-            // Prblm_txtbox
+            // pat_gender_comboBox
             // 
-            this.Prblm_txtbox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.Prblm_txtbox.Location = new System.Drawing.Point(284, 225);
-            this.Prblm_txtbox.Name = "Prblm_txtbox";
-            this.Prblm_txtbox.Size = new System.Drawing.Size(70, 30);
-            this.Prblm_txtbox.TabIndex = 8;
-            // 
-            // incharge_combobox
-            // 
-            this.incharge_combobox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.incharge_combobox.FormattingEnabled = true;
-            this.incharge_combobox.Items.AddRange(new object[] {
+            this.pat_gender_comboBox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
+            this.pat_gender_comboBox.FormattingEnabled = true;
+            this.pat_gender_comboBox.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Another"});
-            this.incharge_combobox.Location = new System.Drawing.Point(284, 275);
-            this.incharge_combobox.Name = "incharge_combobox";
-            this.incharge_combobox.Size = new System.Drawing.Size(138, 31);
-            this.incharge_combobox.TabIndex = 9;
+            this.pat_gender_comboBox.Location = new System.Drawing.Point(284, 275);
+            this.pat_gender_comboBox.Name = "pat_gender_comboBox";
+            this.pat_gender_comboBox.Size = new System.Drawing.Size(138, 31);
+            this.pat_gender_comboBox.TabIndex = 9;
             // 
             // label1
             // 
@@ -155,27 +147,27 @@ namespace Clinics_Management_System
             this.label1.TabIndex = 10;
             this.label1.Text = "years";
             // 
-            // button1
+            // cninc_show_label
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.button1.Location = new System.Drawing.Point(402, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 49);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Register and Appointment";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cninc_show_label.AutoSize = true;
+            this.cninc_show_label.BackColor = System.Drawing.Color.White;
+            this.cninc_show_label.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.cninc_show_label.Location = new System.Drawing.Point(282, 121);
+            this.cninc_show_label.Name = "cninc_show_label";
+            this.cninc_show_label.Size = new System.Drawing.Size(44, 23);
+            this.cninc_show_label.TabIndex = 12;
+            this.cninc_show_label.Text = "cnic";
             // 
             // Pat_Registr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(698, 450);
+            this.Controls.Add(this.cninc_show_label);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.incharge_combobox);
-            this.Controls.Add(this.Prblm_txtbox);
-            this.Controls.Add(this.CNIC_txtbox);
-            this.Controls.Add(this.name_txtbox);
+            this.Controls.Add(this.pat_gender_comboBox);
+            this.Controls.Add(this.pat_age_txtbox);
+            this.Controls.Add(this.pat_name_txtbox);
             this.Controls.Add(this.Reg_btn);
             this.Controls.Add(this.DctrIncharge_lbl);
             this.Controls.Add(this.Prblm_lbl);
@@ -199,11 +191,10 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label Prblm_lbl;
         private System.Windows.Forms.Label DctrIncharge_lbl;
         private System.Windows.Forms.Button Reg_btn;
-        private System.Windows.Forms.TextBox name_txtbox;
-        private System.Windows.Forms.TextBox CNIC_txtbox;
-        private System.Windows.Forms.TextBox Prblm_txtbox;
-        private System.Windows.Forms.ComboBox incharge_combobox;
+        private System.Windows.Forms.TextBox pat_name_txtbox;
+        private System.Windows.Forms.TextBox pat_age_txtbox;
+        private System.Windows.Forms.ComboBox pat_gender_comboBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label cninc_show_label;
     }
 }

@@ -99,14 +99,14 @@
             // 
             this.password_txt.Location = new System.Drawing.Point(434, 31);
             this.password_txt.Name = "password_txt";
-            this.password_txt.Size = new System.Drawing.Size(182, 20);
+            this.password_txt.Size = new System.Drawing.Size(190, 20);
             this.password_txt.TabIndex = 4;
             // 
             // Password
             // 
             this.Password.AutoSize = true;
             this.Password.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(339, 32);
+            this.Password.Location = new System.Drawing.Point(341, 31);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(89, 19);
             this.Password.TabIndex = 3;
@@ -116,17 +116,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 33);
+            this.label1.Location = new System.Drawing.Point(18, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
+            this.label1.Size = new System.Drawing.Size(121, 19);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ID :";
+            this.label1.Text = "Username / ID :";
             // 
             // username_txt
             // 
-            this.username_txt.Location = new System.Drawing.Point(122, 34);
+            this.username_txt.Location = new System.Drawing.Point(143, 32);
             this.username_txt.Name = "username_txt";
-            this.username_txt.Size = new System.Drawing.Size(191, 20);
+            this.username_txt.Size = new System.Drawing.Size(186, 20);
             this.username_txt.TabIndex = 1;
             // 
             // Login_btn

@@ -37,11 +37,11 @@ namespace Clinics_Management_System
             this.inchargheading_lbl = new System.Windows.Forms.Label();
             this.appointheading_lbl = new System.Windows.Forms.Label();
             this.close_btn = new System.Windows.Forms.Button();
-            this.doctorIncharge_lstbox = new System.Windows.Forms.ListBox();
-            this.CNICshow_lbl = new System.Windows.Forms.Label();
-            this.PnameShow_lbl = new System.Windows.Forms.Label();
-            this.ProblemShow_lbl = new System.Windows.Forms.Label();
-            this.appointShow_lbl = new System.Windows.Forms.Label();
+            this.app_doctors_lstbox = new System.Windows.Forms.ListBox();
+            this.CNIC_show_label = new System.Windows.Forms.Label();
+            this.pat_nameShow_label = new System.Windows.Forms.Label();
+            this.ProblemShow_label = new System.Windows.Forms.Label();
+            this.appointShow_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PatReportHead_lbl
@@ -117,70 +117,71 @@ namespace Clinics_Management_System
             this.close_btn.TabIndex = 6;
             this.close_btn.Text = "Close";
             this.close_btn.UseVisualStyleBackColor = true;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
-            // doctorIncharge_lstbox
+            // app_doctors_lstbox
             // 
-            this.doctorIncharge_lstbox.BackColor = System.Drawing.SystemColors.Window;
-            this.doctorIncharge_lstbox.FormattingEnabled = true;
-            this.doctorIncharge_lstbox.Location = new System.Drawing.Point(322, 291);
-            this.doctorIncharge_lstbox.Name = "doctorIncharge_lstbox";
-            this.doctorIncharge_lstbox.Size = new System.Drawing.Size(197, 82);
-            this.doctorIncharge_lstbox.TabIndex = 7;
+            this.app_doctors_lstbox.BackColor = System.Drawing.SystemColors.Window;
+            this.app_doctors_lstbox.FormattingEnabled = true;
+            this.app_doctors_lstbox.Location = new System.Drawing.Point(322, 291);
+            this.app_doctors_lstbox.Name = "app_doctors_lstbox";
+            this.app_doctors_lstbox.Size = new System.Drawing.Size(197, 82);
+            this.app_doctors_lstbox.TabIndex = 7;
             // 
-            // CNICshow_lbl
+            // CNIC_show_label
             // 
-            this.CNICshow_lbl.AutoSize = true;
-            this.CNICshow_lbl.BackColor = System.Drawing.Color.White;
-            this.CNICshow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.CNICshow_lbl.Location = new System.Drawing.Point(318, 99);
-            this.CNICshow_lbl.Name = "CNICshow_lbl";
-            this.CNICshow_lbl.Size = new System.Drawing.Size(44, 23);
-            this.CNICshow_lbl.TabIndex = 8;
-            this.CNICshow_lbl.Text = "cnic";
+            this.CNIC_show_label.AutoSize = true;
+            this.CNIC_show_label.BackColor = System.Drawing.Color.White;
+            this.CNIC_show_label.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.CNIC_show_label.Location = new System.Drawing.Point(318, 99);
+            this.CNIC_show_label.Name = "CNIC_show_label";
+            this.CNIC_show_label.Size = new System.Drawing.Size(44, 23);
+            this.CNIC_show_label.TabIndex = 8;
+            this.CNIC_show_label.Text = "cnic";
             // 
-            // PnameShow_lbl
+            // pat_nameShow_label
             // 
-            this.PnameShow_lbl.AutoSize = true;
-            this.PnameShow_lbl.BackColor = System.Drawing.Color.White;
-            this.PnameShow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
-            this.PnameShow_lbl.Location = new System.Drawing.Point(318, 150);
-            this.PnameShow_lbl.Name = "PnameShow_lbl";
-            this.PnameShow_lbl.Size = new System.Drawing.Size(55, 22);
-            this.PnameShow_lbl.TabIndex = 9;
-            this.PnameShow_lbl.Text = "name";
+            this.pat_nameShow_label.AutoSize = true;
+            this.pat_nameShow_label.BackColor = System.Drawing.Color.White;
+            this.pat_nameShow_label.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
+            this.pat_nameShow_label.Location = new System.Drawing.Point(318, 150);
+            this.pat_nameShow_label.Name = "pat_nameShow_label";
+            this.pat_nameShow_label.Size = new System.Drawing.Size(55, 22);
+            this.pat_nameShow_label.TabIndex = 9;
+            this.pat_nameShow_label.Text = "name";
             // 
-            // ProblemShow_lbl
+            // ProblemShow_label
             // 
-            this.ProblemShow_lbl.AutoSize = true;
-            this.ProblemShow_lbl.BackColor = System.Drawing.Color.White;
-            this.ProblemShow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
-            this.ProblemShow_lbl.Location = new System.Drawing.Point(318, 199);
-            this.ProblemShow_lbl.Name = "ProblemShow_lbl";
-            this.ProblemShow_lbl.Size = new System.Drawing.Size(78, 22);
-            this.ProblemShow_lbl.TabIndex = 10;
-            this.ProblemShow_lbl.Text = "problem";
+            this.ProblemShow_label.AutoSize = true;
+            this.ProblemShow_label.BackColor = System.Drawing.Color.White;
+            this.ProblemShow_label.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
+            this.ProblemShow_label.Location = new System.Drawing.Point(318, 199);
+            this.ProblemShow_label.Name = "ProblemShow_label";
+            this.ProblemShow_label.Size = new System.Drawing.Size(78, 22);
+            this.ProblemShow_label.TabIndex = 10;
+            this.ProblemShow_label.Text = "problem";
             // 
-            // appointShow_lbl
+            // appointShow_label
             // 
-            this.appointShow_lbl.AutoSize = true;
-            this.appointShow_lbl.BackColor = System.Drawing.Color.White;
-            this.appointShow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
-            this.appointShow_lbl.Location = new System.Drawing.Point(318, 243);
-            this.appointShow_lbl.Name = "appointShow_lbl";
-            this.appointShow_lbl.Size = new System.Drawing.Size(172, 22);
-            this.appointShow_lbl.TabIndex = 11;
-            this.appointShow_lbl.Text = "No of Appointments";
+            this.appointShow_label.AutoSize = true;
+            this.appointShow_label.BackColor = System.Drawing.Color.White;
+            this.appointShow_label.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
+            this.appointShow_label.Location = new System.Drawing.Point(318, 243);
+            this.appointShow_label.Name = "appointShow_label";
+            this.appointShow_label.Size = new System.Drawing.Size(172, 22);
+            this.appointShow_label.TabIndex = 11;
+            this.appointShow_label.Text = "No of Appointments";
             // 
             // Pat_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 454);
-            this.Controls.Add(this.appointShow_lbl);
-            this.Controls.Add(this.ProblemShow_lbl);
-            this.Controls.Add(this.PnameShow_lbl);
-            this.Controls.Add(this.CNICshow_lbl);
-            this.Controls.Add(this.doctorIncharge_lstbox);
+            this.Controls.Add(this.appointShow_label);
+            this.Controls.Add(this.ProblemShow_label);
+            this.Controls.Add(this.pat_nameShow_label);
+            this.Controls.Add(this.CNIC_show_label);
+            this.Controls.Add(this.app_doctors_lstbox);
             this.Controls.Add(this.close_btn);
             this.Controls.Add(this.appointheading_lbl);
             this.Controls.Add(this.inchargheading_lbl);
@@ -206,10 +207,10 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label inchargheading_lbl;
         private System.Windows.Forms.Label appointheading_lbl;
         private System.Windows.Forms.Button close_btn;
-        private System.Windows.Forms.ListBox doctorIncharge_lstbox;
-        private System.Windows.Forms.Label CNICshow_lbl;
-        private System.Windows.Forms.Label PnameShow_lbl;
-        private System.Windows.Forms.Label ProblemShow_lbl;
-        private System.Windows.Forms.Label appointShow_lbl;
+        private System.Windows.Forms.ListBox app_doctors_lstbox;
+        private System.Windows.Forms.Label CNIC_show_label;
+        private System.Windows.Forms.Label pat_nameShow_label;
+        private System.Windows.Forms.Label ProblemShow_label;
+        private System.Windows.Forms.Label appointShow_label;
     }
 }

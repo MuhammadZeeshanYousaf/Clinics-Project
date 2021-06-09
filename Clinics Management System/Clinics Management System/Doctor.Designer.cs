@@ -34,10 +34,9 @@ namespace Clinics_Management_System
             this.Dash_tab = new System.Windows.Forms.TabPage();
             this.choices_lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Recetionist_name_label = new System.Windows.Forms.Label();
+            this.Doctor_name_label = new System.Windows.Forms.Label();
             this.welcome_lbl = new System.Windows.Forms.Label();
             this.Patient_tab = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.unchecked_btn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.patients_manage = new System.Windows.Forms.Label();
@@ -65,7 +64,7 @@ namespace Clinics_Management_System
             // 
             this.Dash_tab.Controls.Add(this.choices_lbl);
             this.Dash_tab.Controls.Add(this.label1);
-            this.Dash_tab.Controls.Add(this.Recetionist_name_label);
+            this.Dash_tab.Controls.Add(this.Doctor_name_label);
             this.Dash_tab.Controls.Add(this.welcome_lbl);
             this.Dash_tab.Location = new System.Drawing.Point(4, 25);
             this.Dash_tab.Name = "Dash_tab";
@@ -96,16 +95,16 @@ namespace Clinics_Management_System
             this.label1.TabIndex = 6;
             this.label1.Text = "Here you can:";
             // 
-            // Recetionist_name_label
+            // Doctor_name_label
             // 
-            this.Recetionist_name_label.AutoSize = true;
-            this.Recetionist_name_label.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recetionist_name_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Recetionist_name_label.Location = new System.Drawing.Point(301, 34);
-            this.Recetionist_name_label.Name = "Recetionist_name_label";
-            this.Recetionist_name_label.Size = new System.Drawing.Size(85, 33);
-            this.Recetionist_name_label.TabIndex = 5;
-            this.Recetionist_name_label.Text = "Name";
+            this.Doctor_name_label.AutoSize = true;
+            this.Doctor_name_label.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Doctor_name_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Doctor_name_label.Location = new System.Drawing.Point(301, 34);
+            this.Doctor_name_label.Name = "Doctor_name_label";
+            this.Doctor_name_label.Size = new System.Drawing.Size(85, 33);
+            this.Doctor_name_label.TabIndex = 5;
+            this.Doctor_name_label.Text = "Name";
             // 
             // welcome_lbl
             // 
@@ -119,7 +118,6 @@ namespace Clinics_Management_System
             // 
             // Patient_tab
             // 
-            this.Patient_tab.Controls.Add(this.button1);
             this.Patient_tab.Controls.Add(this.unchecked_btn);
             this.Patient_tab.Controls.Add(this.label2);
             this.Patient_tab.Controls.Add(this.patients_manage);
@@ -134,15 +132,6 @@ namespace Clinics_Management_System
             this.Patient_tab.TabIndex = 1;
             this.Patient_tab.Text = "Patients";
             this.Patient_tab.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(598, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // unchecked_btn
             // 
@@ -187,6 +176,7 @@ namespace Clinics_Management_System
             this.MarkPat_btn.TabIndex = 4;
             this.MarkPat_btn.Text = "Mark Patient Checked";
             this.MarkPat_btn.UseVisualStyleBackColor = true;
+            this.MarkPat_btn.Click += new System.EventHandler(this.MarkPat_btn_Click);
             // 
             // CNIC_txtbox
             // 
@@ -244,12 +234,11 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Button ChkdPat_btn;
         private System.Windows.Forms.TextBox CNIC_txtbox;
         private System.Windows.Forms.Button MarkPat_btn;
-        private System.Windows.Forms.Label Recetionist_name_label;
+        private System.Windows.Forms.Label Doctor_name_label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label choices_lbl;
         private System.Windows.Forms.Label patients_manage;
         private System.Windows.Forms.Button unchecked_btn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
     }
 }

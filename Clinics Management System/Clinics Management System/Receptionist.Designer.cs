@@ -38,7 +38,7 @@ namespace Clinics_Management_System
             this.welcome_lbl = new System.Windows.Forms.Label();
             this.Patient_tab = new System.Windows.Forms.TabPage();
             this.patients_manage = new System.Windows.Forms.Label();
-            this.Dctr_btn = new System.Windows.Forms.Button();
+            this.appoint_dr_btn = new System.Windows.Forms.Button();
             this.ViewRprt_btn = new System.Windows.Forms.Button();
             this.RegPat_btn = new System.Windows.Forms.Button();
             this.CNIC_txtbox = new System.Windows.Forms.TextBox();
@@ -136,7 +136,7 @@ namespace Clinics_Management_System
             // Patient_tab
             // 
             this.Patient_tab.Controls.Add(this.patients_manage);
-            this.Patient_tab.Controls.Add(this.Dctr_btn);
+            this.Patient_tab.Controls.Add(this.appoint_dr_btn);
             this.Patient_tab.Controls.Add(this.ViewRprt_btn);
             this.Patient_tab.Controls.Add(this.RegPat_btn);
             this.Patient_tab.Controls.Add(this.CNIC_txtbox);
@@ -163,21 +163,21 @@ namespace Clinics_Management_System
             this.patients_manage.Text = "Manage Patients";
             this.patients_manage.Click += new System.EventHandler(this.patients_manage_Click);
             // 
-            // Dctr_btn
+            // appoint_dr_btn
             // 
-            this.Dctr_btn.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.Dctr_btn.Location = new System.Drawing.Point(232, 306);
-            this.Dctr_btn.Name = "Dctr_btn";
-            this.Dctr_btn.Size = new System.Drawing.Size(151, 54);
-            this.Dctr_btn.TabIndex = 4;
-            this.Dctr_btn.Text = "Appoint a Doctor";
-            this.Dctr_btn.UseVisualStyleBackColor = true;
-            this.Dctr_btn.Click += new System.EventHandler(this.Dctr_btn_Click);
+            this.appoint_dr_btn.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.appoint_dr_btn.Location = new System.Drawing.Point(232, 233);
+            this.appoint_dr_btn.Name = "appoint_dr_btn";
+            this.appoint_dr_btn.Size = new System.Drawing.Size(151, 54);
+            this.appoint_dr_btn.TabIndex = 4;
+            this.appoint_dr_btn.Text = "Appoint a Doctor";
+            this.appoint_dr_btn.UseVisualStyleBackColor = true;
+            this.appoint_dr_btn.Click += new System.EventHandler(this.Dctr_btn_Click);
             // 
             // ViewRprt_btn
             // 
             this.ViewRprt_btn.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.ViewRprt_btn.Location = new System.Drawing.Point(232, 226);
+            this.ViewRprt_btn.Location = new System.Drawing.Point(232, 322);
             this.ViewRprt_btn.Name = "ViewRprt_btn";
             this.ViewRprt_btn.Size = new System.Drawing.Size(151, 54);
             this.ViewRprt_btn.TabIndex = 3;
@@ -378,7 +378,7 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label Hereucan_lbl;
         private System.Windows.Forms.Label choices_lbl;
         private System.Windows.Forms.Label PatCNIC_lbl;
-        private System.Windows.Forms.Button Dctr_btn;
+        private System.Windows.Forms.Button appoint_dr_btn;
         private System.Windows.Forms.Button ViewRprt_btn;
         private System.Windows.Forms.Button RegPat_btn;
         private System.Windows.Forms.TextBox CNIC_txtbox;

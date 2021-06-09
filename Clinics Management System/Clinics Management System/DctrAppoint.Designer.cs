@@ -34,12 +34,12 @@ namespace Clinics_Management_System
             this.PCNIC_lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.slctDoc_lbl = new System.Windows.Forms.Label();
-            this.DctrsOpt_combobox = new System.Windows.Forms.ComboBox();
+            this.doctor_spec_combobox = new System.Windows.Forms.ComboBox();
             this.submit_btn = new System.Windows.Forms.Button();
-            this.CNICshow_lbl = new System.Windows.Forms.Label();
-            this.PnameShow_lbl = new System.Windows.Forms.Label();
+            this.CNIC_show_label = new System.Windows.Forms.Label();
+            this.pat_nameShow_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.DrName_txtbox = new System.Windows.Forms.TextBox();
+            this.healthProb_txtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AppointDoc_lbl
@@ -48,7 +48,7 @@ namespace Clinics_Management_System
             this.AppointDoc_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AppointDoc_lbl.Font = new System.Drawing.Font("Bahnschrift SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.AppointDoc_lbl.ForeColor = System.Drawing.Color.Navy;
-            this.AppointDoc_lbl.Location = new System.Drawing.Point(195, 33);
+            this.AppointDoc_lbl.Location = new System.Drawing.Point(222, 32);
             this.AppointDoc_lbl.Name = "AppointDoc_lbl";
             this.AppointDoc_lbl.Size = new System.Drawing.Size(257, 41);
             this.AppointDoc_lbl.TabIndex = 0;
@@ -84,14 +84,25 @@ namespace Clinics_Management_System
             this.slctDoc_lbl.TabIndex = 3;
             this.slctDoc_lbl.Text = "Select Doctor :";
             // 
-            // DctrsOpt_combobox
+            // doctor_spec_combobox
             // 
-            this.DctrsOpt_combobox.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.DctrsOpt_combobox.FormattingEnabled = true;
-            this.DctrsOpt_combobox.Location = new System.Drawing.Point(294, 280);
-            this.DctrsOpt_combobox.Name = "DctrsOpt_combobox";
-            this.DctrsOpt_combobox.Size = new System.Drawing.Size(221, 27);
-            this.DctrsOpt_combobox.TabIndex = 4;
+            this.doctor_spec_combobox.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.doctor_spec_combobox.FormattingEnabled = true;
+            this.doctor_spec_combobox.Items.AddRange(new object[] {
+            "Allergist",
+            "Cardiologist",
+            "Dermatologist",
+            "Nephrologist",
+            "Neurologist",
+            "Ophthalmologist",
+            "Otolaryngologist",
+            "Psychiatrist",
+            "Radiologist",
+            "Surgeon"});
+            this.doctor_spec_combobox.Location = new System.Drawing.Point(294, 280);
+            this.doctor_spec_combobox.Name = "doctor_spec_combobox";
+            this.doctor_spec_combobox.Size = new System.Drawing.Size(234, 27);
+            this.doctor_spec_combobox.TabIndex = 4;
             // 
             // submit_btn
             // 
@@ -104,28 +115,28 @@ namespace Clinics_Management_System
             this.submit_btn.UseVisualStyleBackColor = true;
             this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
             // 
-            // CNICshow_lbl
+            // CNIC_show_label
             // 
-            this.CNICshow_lbl.AutoSize = true;
-            this.CNICshow_lbl.BackColor = System.Drawing.Color.White;
-            this.CNICshow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.CNICshow_lbl.Location = new System.Drawing.Point(294, 121);
-            this.CNICshow_lbl.Name = "CNICshow_lbl";
-            this.CNICshow_lbl.Size = new System.Drawing.Size(44, 23);
-            this.CNICshow_lbl.TabIndex = 9;
-            this.CNICshow_lbl.Text = "cnic";
+            this.CNIC_show_label.AutoSize = true;
+            this.CNIC_show_label.BackColor = System.Drawing.Color.White;
+            this.CNIC_show_label.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.CNIC_show_label.Location = new System.Drawing.Point(294, 121);
+            this.CNIC_show_label.Name = "CNIC_show_label";
+            this.CNIC_show_label.Size = new System.Drawing.Size(44, 23);
+            this.CNIC_show_label.TabIndex = 9;
+            this.CNIC_show_label.Text = "cnic";
             // 
-            // PnameShow_lbl
+            // pat_nameShow_label
             // 
-            this.PnameShow_lbl.AutoSize = true;
-            this.PnameShow_lbl.BackColor = System.Drawing.Color.White;
-            this.PnameShow_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
-            this.PnameShow_lbl.Location = new System.Drawing.Point(294, 171);
-            this.PnameShow_lbl.Name = "PnameShow_lbl";
-            this.PnameShow_lbl.Size = new System.Drawing.Size(55, 22);
-            this.PnameShow_lbl.TabIndex = 10;
-            this.PnameShow_lbl.Text = "name";
-            this.PnameShow_lbl.Click += new System.EventHandler(this.PnameShow_lbl_Click);
+            this.pat_nameShow_label.AutoSize = true;
+            this.pat_nameShow_label.BackColor = System.Drawing.Color.White;
+            this.pat_nameShow_label.Font = new System.Drawing.Font("Bahnschrift Light", 13.5F);
+            this.pat_nameShow_label.Location = new System.Drawing.Point(294, 171);
+            this.pat_nameShow_label.Name = "pat_nameShow_label";
+            this.pat_nameShow_label.Size = new System.Drawing.Size(55, 22);
+            this.pat_nameShow_label.TabIndex = 10;
+            this.pat_nameShow_label.Text = "name";
+            this.pat_nameShow_label.Click += new System.EventHandler(this.PnameShow_lbl_Click);
             // 
             // label1
             // 
@@ -138,25 +149,25 @@ namespace Clinics_Management_System
             this.label1.Text = "Health Problem :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // DrName_txtbox
+            // healthProb_txtbox
             // 
-            this.DrName_txtbox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.DrName_txtbox.Location = new System.Drawing.Point(294, 224);
-            this.DrName_txtbox.Name = "DrName_txtbox";
-            this.DrName_txtbox.Size = new System.Drawing.Size(221, 30);
-            this.DrName_txtbox.TabIndex = 12;
+            this.healthProb_txtbox.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
+            this.healthProb_txtbox.Location = new System.Drawing.Point(294, 224);
+            this.healthProb_txtbox.Name = "healthProb_txtbox";
+            this.healthProb_txtbox.Size = new System.Drawing.Size(234, 30);
+            this.healthProb_txtbox.TabIndex = 12;
             // 
             // DctrAppoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 450);
-            this.Controls.Add(this.DrName_txtbox);
+            this.ClientSize = new System.Drawing.Size(692, 450);
+            this.Controls.Add(this.healthProb_txtbox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.PnameShow_lbl);
-            this.Controls.Add(this.CNICshow_lbl);
+            this.Controls.Add(this.pat_nameShow_label);
+            this.Controls.Add(this.CNIC_show_label);
             this.Controls.Add(this.submit_btn);
-            this.Controls.Add(this.DctrsOpt_combobox);
+            this.Controls.Add(this.doctor_spec_combobox);
             this.Controls.Add(this.slctDoc_lbl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PCNIC_lbl);
@@ -176,11 +187,11 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label PCNIC_lbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label slctDoc_lbl;
-        private System.Windows.Forms.ComboBox DctrsOpt_combobox;
+        private System.Windows.Forms.ComboBox doctor_spec_combobox;
         private System.Windows.Forms.Button submit_btn;
-        private System.Windows.Forms.Label CNICshow_lbl;
-        private System.Windows.Forms.Label PnameShow_lbl;
+        private System.Windows.Forms.Label CNIC_show_label;
+        private System.Windows.Forms.Label pat_nameShow_label;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox DrName_txtbox;
+        private System.Windows.Forms.TextBox healthProb_txtbox;
     }
 }
