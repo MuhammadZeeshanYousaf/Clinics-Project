@@ -38,15 +38,31 @@ namespace Clinics_Management_System
         void showReport()
         {
             //Run Query
-            string pat_name;
-            string pat_health_problem;
-            string total_appointments;
-            //print the name in output label
-            //pat_nameShow_label.Text = pat_name;
-            //ProblemShow_label.Text = pat_health_problem;
-            //appointShow_label.Text = total_appointments;
-            //loop
-            //app_doctors_lstbox.Items.Add();
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "SELECT health_problem, doctor_appointed FROM Patients_history WHERE patient_cnic = '"+patient_cnic+"';";
+            SqlDataReader dataReader1 = cmd.ExecuteReader();
+            if(dataReader1.HasRows)
+            {
+                while (dataReader1.Read())// till end of table
+                {
+                    health_problems_lstbox.Items.Add(dataReader1["health_problem"].ToString());
+                    appoint_doctors_lstbox.Items.Add(dataReader1["doctor_appointed"].ToString());
+                }
+                dataReader1.Close();
+            }
+            else
+            {
+                MessageBox.Show("No History Exist for this patient!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataReader1.Close();
+            }
+
+            cmd.CommandText = "SELECT COUNT(patient_cnic) FROM Patients_history WHERE patient_cnic='" + patient_cnic + "';";
+            SqlDataReader dataReader2 = cmd.ExecuteReader();
+            dataReader2.Read();
+            No_appointShow_label.Text = dataReader2[0].ToString();
+            dataReader2.Close();
+            connection.Close();
         }
         private void Pat_Report_Load(object sender, EventArgs e)
         {

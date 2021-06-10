@@ -156,5 +156,36 @@ namespace Clinics_Management_System
         {
 
         }
+
+        private void StsInfo_btn_Click(object sender, EventArgs e)
+        {
+            string roomNo = RoomNo_txtbox_c.Text;
+            if (roomNo == null)
+                return;
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "SELECT doctor_name, specialization FROM Doctors WHERE doctor_room = " + int.Parse(roomNo.ToString()) + ";";
+            SqlDataReader dataReader = cmd.ExecuteReader();
+            dataReader.Read();
+            if(dataReader.HasRows)
+            {
+                string doctor_name = dataReader[0].ToString();
+                string specialization = dataReader[1].ToString();
+                dataReader.Close();
+                connection.Close();
+                new Room_Stat_Info(roomNo, doctor_name, specialization).Show();
+            }
+            else
+            {
+                MessageBox.Show("Room does not Exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataReader.Close();
+                connection.Close();
+            }
+        }
+
+        private void Room_tab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

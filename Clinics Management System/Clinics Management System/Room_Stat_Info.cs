@@ -12,9 +12,13 @@ namespace Clinics_Management_System
 {
     public partial class Room_Stat_Info : Form
     {
-        public Room_Stat_Info()
+        public Room_Stat_Info(string room, string doctor_name, string spec)
         {
             InitializeComponent();
+            room_no_txtbox.Text = room;
+            dr_name_txtbox.Text = doctor_name;
+            spec_txtbox.Text = spec;
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -34,7 +38,7 @@ namespace Clinics_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

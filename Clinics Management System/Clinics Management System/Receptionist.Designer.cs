@@ -46,14 +46,13 @@ namespace Clinics_Management_System
             this.Doctor_tab = new System.Windows.Forms.TabPage();
             this.manage_doctors = new System.Windows.Forms.Label();
             this.DctrInfo_btn = new System.Windows.Forms.Button();
-            this.DctrStat_btn = new System.Windows.Forms.Button();
             this.Spec_combobox = new System.Windows.Forms.ComboBox();
             this.DctrSp_lbl = new System.Windows.Forms.Label();
             this.Room_tab = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.StsInfo_btn = new System.Windows.Forms.Button();
-            this.RoomNo_txtbox = new System.Windows.Forms.TextBox();
             this.RoomNo_lbl = new System.Windows.Forms.Label();
+            this.RoomNo_txtbox_c = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.Dashboard_tab.SuspendLayout();
             this.Patient_tab.SuspendLayout();
@@ -181,7 +180,7 @@ namespace Clinics_Management_System
             this.ViewRprt_btn.Name = "ViewRprt_btn";
             this.ViewRprt_btn.Size = new System.Drawing.Size(151, 54);
             this.ViewRprt_btn.TabIndex = 3;
-            this.ViewRprt_btn.Text = "View Patients Report";
+            this.ViewRprt_btn.Text = "View Patients History Report";
             this.ViewRprt_btn.UseVisualStyleBackColor = true;
             this.ViewRprt_btn.Click += new System.EventHandler(this.ViewRprt_btn_Click);
             // 
@@ -218,7 +217,6 @@ namespace Clinics_Management_System
             // 
             this.Doctor_tab.Controls.Add(this.manage_doctors);
             this.Doctor_tab.Controls.Add(this.DctrInfo_btn);
-            this.Doctor_tab.Controls.Add(this.DctrStat_btn);
             this.Doctor_tab.Controls.Add(this.Spec_combobox);
             this.Doctor_tab.Controls.Add(this.DctrSp_lbl);
             this.Doctor_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,23 +242,13 @@ namespace Clinics_Management_System
             // DctrInfo_btn
             // 
             this.DctrInfo_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.DctrInfo_btn.Location = new System.Drawing.Point(365, 229);
+            this.DctrInfo_btn.Location = new System.Drawing.Point(300, 203);
             this.DctrInfo_btn.Name = "DctrInfo_btn";
             this.DctrInfo_btn.Size = new System.Drawing.Size(173, 64);
             this.DctrInfo_btn.TabIndex = 3;
             this.DctrInfo_btn.Text = "Doctor Info";
             this.DctrInfo_btn.UseVisualStyleBackColor = true;
             this.DctrInfo_btn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // DctrStat_btn
-            // 
-            this.DctrStat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.DctrStat_btn.Location = new System.Drawing.Point(121, 229);
-            this.DctrStat_btn.Name = "DctrStat_btn";
-            this.DctrStat_btn.Size = new System.Drawing.Size(173, 64);
-            this.DctrStat_btn.TabIndex = 2;
-            this.DctrStat_btn.Text = "Doctor Status";
-            this.DctrStat_btn.UseVisualStyleBackColor = true;
             // 
             // Spec_combobox
             // 
@@ -294,9 +282,9 @@ namespace Clinics_Management_System
             // 
             // Room_tab
             // 
+            this.Room_tab.Controls.Add(this.RoomNo_txtbox_c);
             this.Room_tab.Controls.Add(this.label1);
             this.Room_tab.Controls.Add(this.StsInfo_btn);
-            this.Room_tab.Controls.Add(this.RoomNo_txtbox);
             this.Room_tab.Controls.Add(this.RoomNo_lbl);
             this.Room_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Room_tab.Location = new System.Drawing.Point(4, 25);
@@ -305,6 +293,7 @@ namespace Clinics_Management_System
             this.Room_tab.TabIndex = 3;
             this.Room_tab.Text = "Room";
             this.Room_tab.UseVisualStyleBackColor = true;
+            this.Room_tab.Click += new System.EventHandler(this.Room_tab_Click);
             // 
             // label1
             // 
@@ -314,9 +303,9 @@ namespace Clinics_Management_System
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label1.Location = new System.Drawing.Point(7, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 37);
+            this.label1.Size = new System.Drawing.Size(176, 37);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Manage Doctors";
+            this.label1.Text = "View Rooms";
             // 
             // StsInfo_btn
             // 
@@ -325,16 +314,9 @@ namespace Clinics_Management_System
             this.StsInfo_btn.Name = "StsInfo_btn";
             this.StsInfo_btn.Size = new System.Drawing.Size(153, 55);
             this.StsInfo_btn.TabIndex = 2;
-            this.StsInfo_btn.Text = "Room Status / Info";
+            this.StsInfo_btn.Text = "Room Information";
             this.StsInfo_btn.UseVisualStyleBackColor = true;
-            // 
-            // RoomNo_txtbox
-            // 
-            this.RoomNo_txtbox.Location = new System.Drawing.Point(224, 139);
-            this.RoomNo_txtbox.Name = "RoomNo_txtbox";
-            this.RoomNo_txtbox.Size = new System.Drawing.Size(208, 22);
-            this.RoomNo_txtbox.TabIndex = 1;
-            this.RoomNo_txtbox.TextChanged += new System.EventHandler(this.RoomNo_txtbox_TextChanged);
+            this.StsInfo_btn.Click += new System.EventHandler(this.StsInfo_btn_Click);
             // 
             // RoomNo_lbl
             // 
@@ -346,6 +328,25 @@ namespace Clinics_Management_System
             this.RoomNo_lbl.TabIndex = 0;
             this.RoomNo_lbl.Text = "Room No :";
             this.RoomNo_lbl.Click += new System.EventHandler(this.RoomNo_lbl_Click);
+            // 
+            // RoomNo_txtbox_c
+            // 
+            this.RoomNo_txtbox_c.FormattingEnabled = true;
+            this.RoomNo_txtbox_c.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.RoomNo_txtbox_c.Location = new System.Drawing.Point(224, 138);
+            this.RoomNo_txtbox_c.Name = "RoomNo_txtbox_c";
+            this.RoomNo_txtbox_c.Size = new System.Drawing.Size(197, 24);
+            this.RoomNo_txtbox_c.TabIndex = 8;
             // 
             // Receptionist
             // 
@@ -387,13 +388,12 @@ namespace Clinics_Management_System
         private System.Windows.Forms.TextBox CNIC_txtbox;
         private System.Windows.Forms.Label DctrSp_lbl;
         private System.Windows.Forms.Button DctrInfo_btn;
-        private System.Windows.Forms.Button DctrStat_btn;
         private System.Windows.Forms.ComboBox Spec_combobox;
         private System.Windows.Forms.Button StsInfo_btn;
-        private System.Windows.Forms.TextBox RoomNo_txtbox;
         private System.Windows.Forms.Label RoomNo_lbl;
         private System.Windows.Forms.Label patients_manage;
         private System.Windows.Forms.Label manage_doctors;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox RoomNo_txtbox_c;
     }
 }
