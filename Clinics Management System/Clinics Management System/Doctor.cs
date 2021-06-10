@@ -13,14 +13,17 @@ namespace Clinics_Management_System
 {
     public partial class Doctor : Form
     {
+        string doctor_id;
         string DoctorName;
         SqlConnection connection;
-        public Doctor(string doctorName, SqlConnection conn)
+        public Doctor(string dr_id, string doctorName, SqlConnection conn)
         {
             InitializeComponent();
             DoctorName = doctorName;
             Doctor_name_label.Text = DoctorName;
             connection = conn;
+            doctor_id = dr_id;
+
         }
 
         private void unchecked_btn_Click(object sender, EventArgs e)
@@ -40,6 +43,42 @@ namespace Clinics_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //make listboxes empty before updating values
+            pat_cnic_listBox.Items.Clear();
+            pat_name_listBox.Items.Clear();
+            pat_healthProblem_listBox.Items.Clear();
+            dr_appointed_listBox.Items.Clear();
+
+            //make connection open
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            //Run Procedure named as Appointed_patients
+            cmd.CommandText = "EXECUTE Appointed_patients @dr_id = '" + doctor_id + "';";
+            SqlDataReader dataReader = cmd.ExecuteReader();
+
+            if (dataReader.HasRows)
+            {
+                //read all values
+                while (dataReader.Read())// till end of table
+                {
+                    pat_cnic_listBox.Items.Add(dataReader["patient_cnic"].ToString()); // read data from student column 0
+                    pat_name_listBox.Items.Add(dataReader["patient_name"].ToString());// read data from student column 1
+                    pat_healthProblem_listBox.Items.Add(dataReader["health_problem"].ToString());// read data from student column 2
+                    dr_appointed_listBox.Items.Add(dataReader["doctor_appointed"].ToString());// read data from student column 3
+                }
+                dataReader.Close();
+                connection.Close();
+            }
+            else
+            {
+                MessageBox.Show("No Appointments yet!");
+                dataReader.Close();
+                connection.Close();
+            }
         }
     }
 }

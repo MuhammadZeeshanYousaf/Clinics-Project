@@ -112,7 +112,7 @@ namespace Clinics_Management_System
                     //Here user successfully loged in
                     //MessageBox.Show("\" "+result_doctor_name+" \" Log in Successfull.");
                     this.Visible = false;
-                    new Doctor(result_doctor_name, connection).Show();
+                    new Doctor(result_userName ,result_doctor_name, connection).Show();
                 }
                 else
                     MessageBox.Show("Password is Incorrect!");
