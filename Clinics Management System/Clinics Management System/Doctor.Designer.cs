@@ -37,24 +37,22 @@ namespace Clinics_Management_System
             this.Doctor_name_label = new System.Windows.Forms.Label();
             this.welcome_lbl = new System.Windows.Forms.Label();
             this.Patient_tab = new System.Windows.Forms.TabPage();
-            this.unchecked_btn = new System.Windows.Forms.Button();
+            this.unchecked_pat_btn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.patients_manage = new System.Windows.Forms.Label();
-            this.MarkPat_btn = new System.Windows.Forms.Button();
-            this.CNIC_txtbox = new System.Windows.Forms.TextBox();
-            this.PatCNIC_lbl = new System.Windows.Forms.Label();
-            this.ChkdPat_btn = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pat_cnic_listBox = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pat_name_listBox = new System.Windows.Forms.ListBox();
-            this.pat_healthProblem_listBox = new System.Windows.Forms.ListBox();
-            this.dr_appointed_listBox = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.refresh_btn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dr_appointed_listBox = new System.Windows.Forms.ListBox();
+            this.pat_healthProblem_listBox = new System.Windows.Forms.ListBox();
+            this.pat_name_listBox = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pat_cnic_listBox = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checked_pat_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Dash_tab.SuspendLayout();
             this.Patient_tab.SuspendLayout();
@@ -131,13 +129,10 @@ namespace Clinics_Management_System
             // 
             // Patient_tab
             // 
-            this.Patient_tab.Controls.Add(this.unchecked_btn);
+            this.Patient_tab.Controls.Add(this.checked_pat_btn);
+            this.Patient_tab.Controls.Add(this.unchecked_pat_btn);
             this.Patient_tab.Controls.Add(this.label2);
             this.Patient_tab.Controls.Add(this.patients_manage);
-            this.Patient_tab.Controls.Add(this.MarkPat_btn);
-            this.Patient_tab.Controls.Add(this.CNIC_txtbox);
-            this.Patient_tab.Controls.Add(this.PatCNIC_lbl);
-            this.Patient_tab.Controls.Add(this.ChkdPat_btn);
             this.Patient_tab.Location = new System.Drawing.Point(4, 25);
             this.Patient_tab.Name = "Patient_tab";
             this.Patient_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -146,22 +141,22 @@ namespace Clinics_Management_System
             this.Patient_tab.Text = "Patients";
             this.Patient_tab.UseVisualStyleBackColor = true;
             // 
-            // unchecked_btn
+            // unchecked_pat_btn
             // 
-            this.unchecked_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.unchecked_btn.Location = new System.Drawing.Point(117, 303);
-            this.unchecked_btn.Name = "unchecked_btn";
-            this.unchecked_btn.Size = new System.Drawing.Size(175, 60);
-            this.unchecked_btn.TabIndex = 8;
-            this.unchecked_btn.Text = "UnChecked Patients";
-            this.unchecked_btn.UseVisualStyleBackColor = true;
-            this.unchecked_btn.Click += new System.EventHandler(this.unchecked_btn_Click);
+            this.unchecked_pat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.unchecked_pat_btn.Location = new System.Drawing.Point(107, 210);
+            this.unchecked_pat_btn.Name = "unchecked_pat_btn";
+            this.unchecked_pat_btn.Size = new System.Drawing.Size(175, 60);
+            this.unchecked_pat_btn.TabIndex = 8;
+            this.unchecked_pat_btn.Text = "UnChecked Patients";
+            this.unchecked_pat_btn.UseVisualStyleBackColor = true;
+            this.unchecked_pat_btn.Click += new System.EventHandler(this.unchecked_btn_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(53, 250);
+            this.label2.Location = new System.Drawing.Point(53, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(578, 16);
             this.label2.TabIndex = 7;
@@ -180,47 +175,9 @@ namespace Clinics_Management_System
             this.patients_manage.TabIndex = 6;
             this.patients_manage.Text = "Manage Patients";
             // 
-            // MarkPat_btn
-            // 
-            this.MarkPat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.MarkPat_btn.Location = new System.Drawing.Point(239, 171);
-            this.MarkPat_btn.Name = "MarkPat_btn";
-            this.MarkPat_btn.Size = new System.Drawing.Size(175, 36);
-            this.MarkPat_btn.TabIndex = 4;
-            this.MarkPat_btn.Text = "Mark Patient Checked";
-            this.MarkPat_btn.UseVisualStyleBackColor = true;
-            this.MarkPat_btn.Click += new System.EventHandler(this.MarkPat_btn_Click);
-            // 
-            // CNIC_txtbox
-            // 
-            this.CNIC_txtbox.Font = new System.Drawing.Font("Bahnschrift", 13.5F);
-            this.CNIC_txtbox.Location = new System.Drawing.Point(239, 118);
-            this.CNIC_txtbox.Name = "CNIC_txtbox";
-            this.CNIC_txtbox.Size = new System.Drawing.Size(236, 29);
-            this.CNIC_txtbox.TabIndex = 3;
-            // 
-            // PatCNIC_lbl
-            // 
-            this.PatCNIC_lbl.AutoSize = true;
-            this.PatCNIC_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
-            this.PatCNIC_lbl.Location = new System.Drawing.Point(113, 120);
-            this.PatCNIC_lbl.Name = "PatCNIC_lbl";
-            this.PatCNIC_lbl.Size = new System.Drawing.Size(126, 23);
-            this.PatCNIC_lbl.TabIndex = 2;
-            this.PatCNIC_lbl.Text = "Patient CNIC :";
-            // 
-            // ChkdPat_btn
-            // 
-            this.ChkdPat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.ChkdPat_btn.Location = new System.Drawing.Point(394, 303);
-            this.ChkdPat_btn.Name = "ChkdPat_btn";
-            this.ChkdPat_btn.Size = new System.Drawing.Size(175, 60);
-            this.ChkdPat_btn.TabIndex = 1;
-            this.ChkdPat_btn.Text = "Checked Patients";
-            this.ChkdPat_btn.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.refresh_btn);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
@@ -238,15 +195,85 @@ namespace Clinics_Management_System
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Appointed Patients";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // pat_cnic_listBox
+            // refresh_btn
             // 
-            this.pat_cnic_listBox.FormattingEnabled = true;
-            this.pat_cnic_listBox.ItemHeight = 16;
-            this.pat_cnic_listBox.Location = new System.Drawing.Point(7, 109);
-            this.pat_cnic_listBox.Name = "pat_cnic_listBox";
-            this.pat_cnic_listBox.Size = new System.Drawing.Size(126, 276);
-            this.pat_cnic_listBox.TabIndex = 0;
+            this.refresh_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.refresh_btn.Location = new System.Drawing.Point(574, 16);
+            this.refresh_btn.Name = "refresh_btn";
+            this.refresh_btn.Size = new System.Drawing.Size(97, 36);
+            this.refresh_btn.TabIndex = 17;
+            this.refresh_btn.Text = "Refresh";
+            this.refresh_btn.UseVisualStyleBackColor = true;
+            this.refresh_btn.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(515, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(118, 19);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Doctor Appointed";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(301, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 19);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Health Problem";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(135, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 19);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Patient Name";
+            // 
+            // dr_appointed_listBox
+            // 
+            this.dr_appointed_listBox.FormattingEnabled = true;
+            this.dr_appointed_listBox.ItemHeight = 16;
+            this.dr_appointed_listBox.Location = new System.Drawing.Point(519, 109);
+            this.dr_appointed_listBox.Name = "dr_appointed_listBox";
+            this.dr_appointed_listBox.Size = new System.Drawing.Size(152, 276);
+            this.dr_appointed_listBox.TabIndex = 13;
+            // 
+            // pat_healthProblem_listBox
+            // 
+            this.pat_healthProblem_listBox.FormattingEnabled = true;
+            this.pat_healthProblem_listBox.ItemHeight = 16;
+            this.pat_healthProblem_listBox.Location = new System.Drawing.Point(305, 109);
+            this.pat_healthProblem_listBox.Name = "pat_healthProblem_listBox";
+            this.pat_healthProblem_listBox.Size = new System.Drawing.Size(208, 276);
+            this.pat_healthProblem_listBox.TabIndex = 11;
+            // 
+            // pat_name_listBox
+            // 
+            this.pat_name_listBox.FormattingEnabled = true;
+            this.pat_name_listBox.ItemHeight = 16;
+            this.pat_name_listBox.Location = new System.Drawing.Point(139, 109);
+            this.pat_name_listBox.Name = "pat_name_listBox";
+            this.pat_name_listBox.Size = new System.Drawing.Size(160, 276);
+            this.pat_name_listBox.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 19);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Patient CNIC";
             // 
             // label3
             // 
@@ -260,89 +287,42 @@ namespace Clinics_Management_System
             this.label3.TabIndex = 7;
             this.label3.Text = "Appointed View Patients";
             // 
-            // label5
+            // pat_cnic_listBox
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 19);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Patient CNIC";
+            this.pat_cnic_listBox.FormattingEnabled = true;
+            this.pat_cnic_listBox.ItemHeight = 16;
+            this.pat_cnic_listBox.Location = new System.Drawing.Point(7, 109);
+            this.pat_cnic_listBox.Name = "pat_cnic_listBox";
+            this.pat_cnic_listBox.Size = new System.Drawing.Size(126, 276);
+            this.pat_cnic_listBox.TabIndex = 0;
             // 
-            // pat_name_listBox
+            // button1
             // 
-            this.pat_name_listBox.FormattingEnabled = true;
-            this.pat_name_listBox.ItemHeight = 16;
-            this.pat_name_listBox.Location = new System.Drawing.Point(139, 109);
-            this.pat_name_listBox.Name = "pat_name_listBox";
-            this.pat_name_listBox.Size = new System.Drawing.Size(160, 276);
-            this.pat_name_listBox.TabIndex = 10;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.button1.Location = new System.Drawing.Point(380, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 56);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Mark Top Patient Checked";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // pat_healthProblem_listBox
+            // checked_pat_btn
             // 
-            this.pat_healthProblem_listBox.FormattingEnabled = true;
-            this.pat_healthProblem_listBox.ItemHeight = 16;
-            this.pat_healthProblem_listBox.Location = new System.Drawing.Point(305, 109);
-            this.pat_healthProblem_listBox.Name = "pat_healthProblem_listBox";
-            this.pat_healthProblem_listBox.Size = new System.Drawing.Size(208, 276);
-            this.pat_healthProblem_listBox.TabIndex = 11;
-            // 
-            // dr_appointed_listBox
-            // 
-            this.dr_appointed_listBox.FormattingEnabled = true;
-            this.dr_appointed_listBox.ItemHeight = 16;
-            this.dr_appointed_listBox.Location = new System.Drawing.Point(519, 109);
-            this.dr_appointed_listBox.Name = "dr_appointed_listBox";
-            this.dr_appointed_listBox.Size = new System.Drawing.Size(152, 276);
-            this.dr_appointed_listBox.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(135, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 19);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Patient Name";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(301, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 19);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Health Problem";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(515, 75);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 19);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Doctor Appointed";
-            // 
-            // refresh_btn
-            // 
-            this.refresh_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.refresh_btn.Location = new System.Drawing.Point(574, 16);
-            this.refresh_btn.Name = "refresh_btn";
-            this.refresh_btn.Size = new System.Drawing.Size(97, 36);
-            this.refresh_btn.TabIndex = 17;
-            this.refresh_btn.Text = "Refresh";
-            this.refresh_btn.UseVisualStyleBackColor = true;
-            this.refresh_btn.Click += new System.EventHandler(this.button1_Click_1);
+            this.checked_pat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.checked_pat_btn.Location = new System.Drawing.Point(392, 210);
+            this.checked_pat_btn.Name = "checked_pat_btn";
+            this.checked_pat_btn.Size = new System.Drawing.Size(175, 60);
+            this.checked_pat_btn.TabIndex = 9;
+            this.checked_pat_btn.Text = "Checked Patients";
+            this.checked_pat_btn.UseVisualStyleBackColor = true;
+            this.checked_pat_btn.Click += new System.EventHandler(this.checked_pat_btn_Click);
             // 
             // Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 450);
+            this.ClientSize = new System.Drawing.Size(688, 452);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Doctor";
@@ -364,15 +344,11 @@ namespace Clinics_Management_System
         private System.Windows.Forms.TabPage Dash_tab;
         private System.Windows.Forms.Label welcome_lbl;
         private System.Windows.Forms.TabPage Patient_tab;
-        private System.Windows.Forms.Label PatCNIC_lbl;
-        private System.Windows.Forms.Button ChkdPat_btn;
-        private System.Windows.Forms.TextBox CNIC_txtbox;
-        private System.Windows.Forms.Button MarkPat_btn;
         private System.Windows.Forms.Label Doctor_name_label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label choices_lbl;
         private System.Windows.Forms.Label patients_manage;
-        private System.Windows.Forms.Button unchecked_btn;
+        private System.Windows.Forms.Button unchecked_pat_btn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ListBox dr_appointed_listBox;
@@ -385,5 +361,7 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button refresh_btn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button checked_pat_btn;
     }
 }
