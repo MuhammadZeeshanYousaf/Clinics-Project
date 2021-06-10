@@ -57,12 +57,6 @@
     <Compile Include="App_Login.Designer.cs">
       <DependentUpon>App_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Checked_Pat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Checked_Pat.Designer.cs">
-      <DependentUpon>Checked_Pat.cs</DependentUpon>
-    </Compile>
     <Compile Include="ClinicsDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,12 +91,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Unchecked_Pat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Unchecked_Pat.Designer.cs">
-      <DependentUpon>Unchecked_Pat.cs</DependentUpon>
     </Compile>
     <Compile Include="Room_Stat_Info.cs">
       <SubType>Form</SubType>
@@ -152,9 +140,6 @@
     <EmbeddedResource Include="App_Login.resx">
       <DependentUpon>App_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Checked_Pat.resx">
-      <DependentUpon>Checked_Pat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DctrAppoint.resx">
       <DependentUpon>DctrAppoint.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Room_Stat_Info.resx">
       <DependentUpon>Room_Stat_Info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Unchecked_Pat.resx">
-      <DependentUpon>Unchecked_Pat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
