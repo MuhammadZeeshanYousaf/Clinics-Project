@@ -96,26 +96,26 @@ namespace Clinics_Management_System
 
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "SELECT appointment_date_time FROM Appointments WHERE patient_cnic = '" + topPatient_cnic + "' ORDER BY appointment_date_time DESC;";
+            cmd.CommandText = "SELECT appointment_data_time FROM Appointments WHERE patient_cnic = '" + topPatient_cnic + "' ORDER BY appointment_data_time DESC;";
             SqlDataReader dataReader = cmd.ExecuteReader();
 
             if (dataReader.HasRows)
             {
                 dataReader.Read();
                 topPatient_app_dateTime = dataReader[0].ToString();
+                dataReader.Close();
 
                 //Now insert this data into Patients_history table
-                cmd = connection.CreateCommand();
-                cmd.CommandText = "INSERT INTO Patients_history VALUES('" + topPatient_cnic + "','" + topPatient_healthProblem + "','" + topPatient_doctor + "','" + topPatient_app_dateTime + "');";
+                SqlCommand cmd1 = connection.CreateCommand();
+                cmd1.CommandText = "INSERT INTO Patients_history VALUES('" + topPatient_cnic + "','" + topPatient_healthProblem + "','" + topPatient_doctor + "','" + topPatient_app_dateTime + "');";
 
                 try
                 {
-                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
                 }
                 catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    dataReader.Close();
                     connection.Close();
                     return;
                 }
@@ -128,22 +128,20 @@ namespace Clinics_Management_System
             }
 
             //Appointed_patients and delete top record
-            cmd = connection.CreateCommand();
-            cmd.CommandText = "DELETE FROM Appointments WHERE patient_cnic = '" + topPatient_cnic + "';";
+            SqlCommand cmd2 = connection.CreateCommand();
+            cmd2.CommandText = "DELETE FROM Appointments WHERE patient_cnic = '" + topPatient_cnic + "';";
 
             try
             {
-                cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
                 MessageBox.Show("Top patient Marked Check Successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dataReader.Close();
                 connection.Close();
             }
 
-            dataReader.Close();
             connection.Close();
 
         }

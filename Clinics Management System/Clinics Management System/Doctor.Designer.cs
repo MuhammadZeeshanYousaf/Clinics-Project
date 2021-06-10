@@ -36,11 +36,8 @@ namespace Clinics_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.Doctor_name_label = new System.Windows.Forms.Label();
             this.welcome_lbl = new System.Windows.Forms.Label();
-            this.Patient_tab = new System.Windows.Forms.TabPage();
-            this.unchecked_pat_btn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.patients_manage = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.refresh_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,18 +48,14 @@ namespace Clinics_Management_System
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pat_cnic_listBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checked_pat_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Dash_tab.SuspendLayout();
-            this.Patient_tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Dash_tab);
-            this.tabControl1.Controls.Add(this.Patient_tab);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
@@ -127,54 +120,6 @@ namespace Clinics_Management_System
             this.welcome_lbl.TabIndex = 0;
             this.welcome_lbl.Text = "Welcome Doctor";
             // 
-            // Patient_tab
-            // 
-            this.Patient_tab.Controls.Add(this.checked_pat_btn);
-            this.Patient_tab.Controls.Add(this.unchecked_pat_btn);
-            this.Patient_tab.Controls.Add(this.label2);
-            this.Patient_tab.Controls.Add(this.patients_manage);
-            this.Patient_tab.Location = new System.Drawing.Point(4, 25);
-            this.Patient_tab.Name = "Patient_tab";
-            this.Patient_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Patient_tab.Size = new System.Drawing.Size(679, 421);
-            this.Patient_tab.TabIndex = 1;
-            this.Patient_tab.Text = "Patients";
-            this.Patient_tab.UseVisualStyleBackColor = true;
-            // 
-            // unchecked_pat_btn
-            // 
-            this.unchecked_pat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.unchecked_pat_btn.Location = new System.Drawing.Point(107, 210);
-            this.unchecked_pat_btn.Name = "unchecked_pat_btn";
-            this.unchecked_pat_btn.Size = new System.Drawing.Size(175, 60);
-            this.unchecked_pat_btn.TabIndex = 8;
-            this.unchecked_pat_btn.Text = "UnChecked Patients";
-            this.unchecked_pat_btn.UseVisualStyleBackColor = true;
-            this.unchecked_pat_btn.Click += new System.EventHandler(this.unchecked_btn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(53, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(578, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "___________________________________Pateints View_________________________________" +
-    "__";
-            // 
-            // patients_manage
-            // 
-            this.patients_manage.AutoSize = true;
-            this.patients_manage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.patients_manage.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patients_manage.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.patients_manage.Location = new System.Drawing.Point(7, 15);
-            this.patients_manage.Name = "patients_manage";
-            this.patients_manage.Size = new System.Drawing.Size(230, 37);
-            this.patients_manage.TabIndex = 6;
-            this.patients_manage.Text = "Manage Patients";
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.button1);
@@ -196,6 +141,17 @@ namespace Clinics_Management_System
             this.tabPage1.Text = "Appointed Patients";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.button1.Location = new System.Drawing.Point(380, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 56);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Mark Top Patient Checked";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // refresh_btn
             // 
@@ -296,28 +252,6 @@ namespace Clinics_Management_System
             this.pat_cnic_listBox.Size = new System.Drawing.Size(126, 276);
             this.pat_cnic_listBox.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.button1.Location = new System.Drawing.Point(380, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 56);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Mark Top Patient Checked";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // checked_pat_btn
-            // 
-            this.checked_pat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.checked_pat_btn.Location = new System.Drawing.Point(392, 210);
-            this.checked_pat_btn.Name = "checked_pat_btn";
-            this.checked_pat_btn.Size = new System.Drawing.Size(175, 60);
-            this.checked_pat_btn.TabIndex = 9;
-            this.checked_pat_btn.Text = "Checked Patients";
-            this.checked_pat_btn.UseVisualStyleBackColor = true;
-            this.checked_pat_btn.Click += new System.EventHandler(this.checked_pat_btn_Click);
-            // 
             // Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,8 +264,6 @@ namespace Clinics_Management_System
             this.tabControl1.ResumeLayout(false);
             this.Dash_tab.ResumeLayout(false);
             this.Dash_tab.PerformLayout();
-            this.Patient_tab.ResumeLayout(false);
-            this.Patient_tab.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
@@ -343,13 +275,9 @@ namespace Clinics_Management_System
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Dash_tab;
         private System.Windows.Forms.Label welcome_lbl;
-        private System.Windows.Forms.TabPage Patient_tab;
         private System.Windows.Forms.Label Doctor_name_label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label choices_lbl;
-        private System.Windows.Forms.Label patients_manage;
-        private System.Windows.Forms.Button unchecked_pat_btn;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ListBox dr_appointed_listBox;
         private System.Windows.Forms.ListBox pat_healthProblem_listBox;
@@ -362,6 +290,5 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button refresh_btn;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button checked_pat_btn;
     }
 }
