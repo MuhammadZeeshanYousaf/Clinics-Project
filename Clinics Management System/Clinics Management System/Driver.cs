@@ -13,9 +13,12 @@ namespace Clinics_Management_System
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
         [STAThread]
         static void Main()
         {
+            //main driver of the program
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new App_Login(conn));
