@@ -48,11 +48,11 @@ namespace Clinics_Management_System
             this.AppointDoc_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AppointDoc_lbl.Font = new System.Drawing.Font("Bahnschrift SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.AppointDoc_lbl.ForeColor = System.Drawing.Color.Navy;
-            this.AppointDoc_lbl.Location = new System.Drawing.Point(222, 32);
+            this.AppointDoc_lbl.Location = new System.Drawing.Point(214, 32);
             this.AppointDoc_lbl.Name = "AppointDoc_lbl";
-            this.AppointDoc_lbl.Size = new System.Drawing.Size(257, 41);
+            this.AppointDoc_lbl.Size = new System.Drawing.Size(303, 41);
             this.AppointDoc_lbl.TabIndex = 0;
-            this.AppointDoc_lbl.Text = "Appoint a Doctor";
+            this.AppointDoc_lbl.Text = "Doctor Appointment";
             // 
             // PCNIC_lbl
             // 

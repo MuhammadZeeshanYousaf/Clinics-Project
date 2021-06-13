@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Clinics_Management_System
@@ -24,8 +17,6 @@ namespace Clinics_Management_System
             Doctor_name_label.Text = DoctorName;
             connection = conn;
             doctor_id = dr_id;
-            //To perform automatically refresh the appoointments
-            refresh_btn.PerformClick();
         }
 
         private void unchecked_btn_Click(object sender, EventArgs e)
@@ -156,6 +147,17 @@ namespace Clinics_Management_System
         private void checked_pat_btn_Click_1(object sender, EventArgs e)
         {
             new Checked_pat(doctor_id, connection).Show();
+        }
+
+        private void ViewRprt_btn_Click(object sender, EventArgs e)
+        {
+            //get patient cnic
+            string pat_cnic = cnic_txtbox.Text;
+            //check pat_cnic null or have value
+            if (pat_cnic == null)
+                return;
+            //else show patient history in new Win form
+            new patient_history(doctor_id, pat_cnic, connection).Show();
         }
     }
 }

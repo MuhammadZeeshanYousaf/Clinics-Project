@@ -52,7 +52,7 @@ namespace Clinics_Management_System
             }
             else
             {
-                MessageBox.Show("Patient is not Registered!");
+                MessageBox.Show("Patient is not Registered!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
                 return null;
             }

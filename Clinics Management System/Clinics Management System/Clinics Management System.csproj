@@ -90,12 +90,6 @@
     <Compile Include="DctrAppoint.Designer.cs">
       <DependentUpon>DctrAppoint.cs</DependentUpon>
     </Compile>
-    <Compile Include="DctrStatus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DctrStatus.Designer.cs">
-      <DependentUpon>DctrStatus.cs</DependentUpon>
-    </Compile>
     <Compile Include="DctrInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +103,12 @@
       <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
     <Compile Include="Driver.cs" />
+    <Compile Include="patient_history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patient_history.Designer.cs">
+      <DependentUpon>patient_history.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -171,11 +171,11 @@
     <EmbeddedResource Include="DctrInfo.resx">
       <DependentUpon>DctrInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DctrStatus.resx">
-      <DependentUpon>DctrStatus.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patient_history.resx">
+      <DependentUpon>patient_history.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pat_Report.resx">
       <DependentUpon>Pat_Report.cs</DependentUpon>

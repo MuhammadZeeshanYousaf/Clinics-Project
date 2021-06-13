@@ -61,11 +61,11 @@
             this.AppointDoc_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AppointDoc_lbl.Font = new System.Drawing.Font("Bahnschrift SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.AppointDoc_lbl.ForeColor = System.Drawing.Color.Navy;
-            this.AppointDoc_lbl.Location = new System.Drawing.Point(272, 11);
+            this.AppointDoc_lbl.Location = new System.Drawing.Point(264, 9);
             this.AppointDoc_lbl.Name = "AppointDoc_lbl";
-            this.AppointDoc_lbl.Size = new System.Drawing.Size(247, 41);
+            this.AppointDoc_lbl.Size = new System.Drawing.Size(295, 41);
             this.AppointDoc_lbl.TabIndex = 1;
-            this.AppointDoc_lbl.Text = "Patients History";
+            this.AppointDoc_lbl.Text = "All Patients History";
             // 
             // checked_pat_dataGrid
             // 

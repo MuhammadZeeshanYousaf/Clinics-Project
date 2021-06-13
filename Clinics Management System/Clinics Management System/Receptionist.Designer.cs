@@ -49,10 +49,10 @@ namespace Clinics_Management_System
             this.Spec_combobox = new System.Windows.Forms.ComboBox();
             this.DctrSp_lbl = new System.Windows.Forms.Label();
             this.Room_tab = new System.Windows.Forms.TabPage();
+            this.RoomNo_txtbox_c = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.StsInfo_btn = new System.Windows.Forms.Button();
             this.RoomNo_lbl = new System.Windows.Forms.Label();
-            this.RoomNo_txtbox_c = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.Dashboard_tab.SuspendLayout();
             this.Patient_tab.SuspendLayout();
@@ -93,18 +93,19 @@ namespace Clinics_Management_System
             // 
             this.choices_lbl.AutoSize = true;
             this.choices_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choices_lbl.Location = new System.Drawing.Point(200, 142);
+            this.choices_lbl.Location = new System.Drawing.Point(188, 123);
             this.choices_lbl.Name = "choices_lbl";
-            this.choices_lbl.Size = new System.Drawing.Size(249, 207);
+            this.choices_lbl.Size = new System.Drawing.Size(281, 253);
             this.choices_lbl.TabIndex = 6;
-            this.choices_lbl.Text = "- Register Patients\r\n\r\n- View paitent reports\r\n\r\n- Check doctor status\r\n\r\n- Check" +
-    " room status\r\n\r\n(Just navigate through tabs)";
+            this.choices_lbl.Text = "- Register Patients\r\n\r\n- Make Appointment with doctor\r\n\r\n- View paitent history\r\n" +
+    "\r\n- View doctor information\r\n\r\n- View room information\r\n\r\n(Just navigate through" +
+    " tabs)";
             // 
             // Hereucan_lbl
             // 
             this.Hereucan_lbl.AutoSize = true;
             this.Hereucan_lbl.Font = new System.Drawing.Font("Bahnschrift Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hereucan_lbl.Location = new System.Drawing.Point(133, 107);
+            this.Hereucan_lbl.Location = new System.Drawing.Point(121, 88);
             this.Hereucan_lbl.Name = "Hereucan_lbl";
             this.Hereucan_lbl.Size = new System.Drawing.Size(140, 25);
             this.Hereucan_lbl.TabIndex = 5;
@@ -169,7 +170,7 @@ namespace Clinics_Management_System
             this.appoint_dr_btn.Name = "appoint_dr_btn";
             this.appoint_dr_btn.Size = new System.Drawing.Size(151, 54);
             this.appoint_dr_btn.TabIndex = 4;
-            this.appoint_dr_btn.Text = "Appoint a Doctor";
+            this.appoint_dr_btn.Text = "Make an Appointment";
             this.appoint_dr_btn.UseVisualStyleBackColor = true;
             this.appoint_dr_btn.Click += new System.EventHandler(this.Dctr_btn_Click);
             // 
@@ -180,7 +181,7 @@ namespace Clinics_Management_System
             this.ViewRprt_btn.Name = "ViewRprt_btn";
             this.ViewRprt_btn.Size = new System.Drawing.Size(151, 54);
             this.ViewRprt_btn.TabIndex = 3;
-            this.ViewRprt_btn.Text = "View Patients History Report";
+            this.ViewRprt_btn.Text = "View Patient History Report";
             this.ViewRprt_btn.UseVisualStyleBackColor = true;
             this.ViewRprt_btn.Click += new System.EventHandler(this.ViewRprt_btn_Click);
             // 
@@ -189,7 +190,7 @@ namespace Clinics_Management_System
             this.RegPat_btn.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegPat_btn.Location = new System.Drawing.Point(232, 149);
             this.RegPat_btn.Name = "RegPat_btn";
-            this.RegPat_btn.Size = new System.Drawing.Size(151, 53);
+            this.RegPat_btn.Size = new System.Drawing.Size(151, 56);
             this.RegPat_btn.TabIndex = 2;
             this.RegPat_btn.Text = "Register Patient";
             this.RegPat_btn.UseVisualStyleBackColor = true;
@@ -235,9 +236,9 @@ namespace Clinics_Management_System
             this.manage_doctors.ForeColor = System.Drawing.SystemColors.GrayText;
             this.manage_doctors.Location = new System.Drawing.Point(7, 15);
             this.manage_doctors.Name = "manage_doctors";
-            this.manage_doctors.Size = new System.Drawing.Size(227, 37);
+            this.manage_doctors.Size = new System.Drawing.Size(260, 37);
             this.manage_doctors.TabIndex = 6;
-            this.manage_doctors.Text = "Manage Doctors";
+            this.manage_doctors.Text = "Doctor Information";
             // 
             // DctrInfo_btn
             // 
@@ -295,40 +296,6 @@ namespace Clinics_Management_System
             this.Room_tab.UseVisualStyleBackColor = true;
             this.Room_tab.Click += new System.EventHandler(this.Room_tab_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(7, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 37);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "View Rooms";
-            // 
-            // StsInfo_btn
-            // 
-            this.StsInfo_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.StsInfo_btn.Location = new System.Drawing.Point(224, 201);
-            this.StsInfo_btn.Name = "StsInfo_btn";
-            this.StsInfo_btn.Size = new System.Drawing.Size(153, 55);
-            this.StsInfo_btn.TabIndex = 2;
-            this.StsInfo_btn.Text = "Room Information";
-            this.StsInfo_btn.UseVisualStyleBackColor = true;
-            this.StsInfo_btn.Click += new System.EventHandler(this.StsInfo_btn_Click);
-            // 
-            // RoomNo_lbl
-            // 
-            this.RoomNo_lbl.AutoSize = true;
-            this.RoomNo_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoomNo_lbl.Location = new System.Drawing.Point(123, 139);
-            this.RoomNo_lbl.Name = "RoomNo_lbl";
-            this.RoomNo_lbl.Size = new System.Drawing.Size(95, 23);
-            this.RoomNo_lbl.TabIndex = 0;
-            this.RoomNo_lbl.Text = "Room No :";
-            this.RoomNo_lbl.Click += new System.EventHandler(this.RoomNo_lbl_Click);
-            // 
             // RoomNo_txtbox_c
             // 
             this.RoomNo_txtbox_c.FormattingEnabled = true;
@@ -343,10 +310,44 @@ namespace Clinics_Management_System
             "8",
             "9",
             "10"});
-            this.RoomNo_txtbox_c.Location = new System.Drawing.Point(224, 138);
+            this.RoomNo_txtbox_c.Location = new System.Drawing.Point(224, 140);
             this.RoomNo_txtbox_c.Name = "RoomNo_txtbox_c";
             this.RoomNo_txtbox_c.Size = new System.Drawing.Size(197, 24);
             this.RoomNo_txtbox_c.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label1.Location = new System.Drawing.Point(7, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(249, 37);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Room Information";
+            // 
+            // StsInfo_btn
+            // 
+            this.StsInfo_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.StsInfo_btn.Location = new System.Drawing.Point(224, 201);
+            this.StsInfo_btn.Name = "StsInfo_btn";
+            this.StsInfo_btn.Size = new System.Drawing.Size(139, 55);
+            this.StsInfo_btn.TabIndex = 2;
+            this.StsInfo_btn.Text = "Room Info";
+            this.StsInfo_btn.UseVisualStyleBackColor = true;
+            this.StsInfo_btn.Click += new System.EventHandler(this.StsInfo_btn_Click);
+            // 
+            // RoomNo_lbl
+            // 
+            this.RoomNo_lbl.AutoSize = true;
+            this.RoomNo_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomNo_lbl.Location = new System.Drawing.Point(123, 139);
+            this.RoomNo_lbl.Name = "RoomNo_lbl";
+            this.RoomNo_lbl.Size = new System.Drawing.Size(95, 23);
+            this.RoomNo_lbl.TabIndex = 0;
+            this.RoomNo_lbl.Text = "Room No :";
+            this.RoomNo_lbl.Click += new System.EventHandler(this.RoomNo_lbl_Click);
             // 
             // Receptionist
             // 

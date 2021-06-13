@@ -49,10 +49,13 @@ namespace Clinics_Management_System
             this.label3 = new System.Windows.Forms.Label();
             this.pat_cnic_listBox = new System.Windows.Forms.ListBox();
             this.patients_tab = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.checked_pat_btn = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.checked_pat_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cnic_txtbox = new System.Windows.Forms.TextBox();
+            this.PatCNIC_lbl = new System.Windows.Forms.Label();
+            this.ViewRprt_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Dash_tab.SuspendLayout();
             this.appointments_tab.SuspendLayout();
@@ -261,6 +264,9 @@ namespace Clinics_Management_System
             // 
             // patients_tab
             // 
+            this.patients_tab.Controls.Add(this.ViewRprt_btn);
+            this.patients_tab.Controls.Add(this.cnic_txtbox);
+            this.patients_tab.Controls.Add(this.PatCNIC_lbl);
             this.patients_tab.Controls.Add(this.label9);
             this.patients_tab.Controls.Add(this.label8);
             this.patients_tab.Controls.Add(this.checked_pat_btn);
@@ -271,6 +277,40 @@ namespace Clinics_Management_System
             this.patients_tab.TabIndex = 3;
             this.patients_tab.Text = "Patients";
             this.patients_tab.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(48, 200);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(553, 19);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "____________________________Patient History____________________________";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(49, 119);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(285, 23);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "View all checked patients history -->";
+            // 
+            // checked_pat_btn
+            // 
+            this.checked_pat_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checked_pat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.checked_pat_btn.Location = new System.Drawing.Point(364, 113);
+            this.checked_pat_btn.Name = "checked_pat_btn";
+            this.checked_pat_btn.Size = new System.Drawing.Size(221, 36);
+            this.checked_pat_btn.TabIndex = 20;
+            this.checked_pat_btn.Text = "View Checked Patients";
+            this.checked_pat_btn.UseVisualStyleBackColor = true;
+            this.checked_pat_btn.Click += new System.EventHandler(this.checked_pat_btn_Click_1);
             // 
             // label2
             // 
@@ -284,39 +324,33 @@ namespace Clinics_Management_System
             this.label2.TabIndex = 19;
             this.label2.Text = "Patients Appointments";
             // 
-            // checked_pat_btn
+            // cnic_txtbox
             // 
-            this.checked_pat_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checked_pat_btn.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.checked_pat_btn.Location = new System.Drawing.Point(346, 113);
-            this.checked_pat_btn.Name = "checked_pat_btn";
-            this.checked_pat_btn.Size = new System.Drawing.Size(221, 36);
-            this.checked_pat_btn.TabIndex = 20;
-            this.checked_pat_btn.Text = "View Checked Patients";
-            this.checked_pat_btn.UseVisualStyleBackColor = true;
-            this.checked_pat_btn.Click += new System.EventHandler(this.checked_pat_btn_Click_1);
+            this.cnic_txtbox.Location = new System.Drawing.Point(251, 256);
+            this.cnic_txtbox.Name = "cnic_txtbox";
+            this.cnic_txtbox.Size = new System.Drawing.Size(237, 22);
+            this.cnic_txtbox.TabIndex = 24;
             // 
-            // label8
+            // PatCNIC_lbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(31, 119);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(285, 23);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "View all checked patients history -->";
+            this.PatCNIC_lbl.AutoSize = true;
+            this.PatCNIC_lbl.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatCNIC_lbl.Location = new System.Drawing.Point(119, 253);
+            this.PatCNIC_lbl.Name = "PatCNIC_lbl";
+            this.PatCNIC_lbl.Size = new System.Drawing.Size(126, 23);
+            this.PatCNIC_lbl.TabIndex = 23;
+            this.PatCNIC_lbl.Text = "Patient CNIC :";
             // 
-            // label9
+            // ViewRprt_btn
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(48, 200);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(553, 19);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "____________________________Patient History____________________________";
+            this.ViewRprt_btn.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.ViewRprt_btn.Location = new System.Drawing.Point(251, 303);
+            this.ViewRprt_btn.Name = "ViewRprt_btn";
+            this.ViewRprt_btn.Size = new System.Drawing.Size(151, 54);
+            this.ViewRprt_btn.TabIndex = 25;
+            this.ViewRprt_btn.Text = "View Patient History";
+            this.ViewRprt_btn.UseVisualStyleBackColor = true;
+            this.ViewRprt_btn.Click += new System.EventHandler(this.ViewRprt_btn_Click);
             // 
             // Doctor
             // 
@@ -363,5 +397,8 @@ namespace Clinics_Management_System
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button checked_pat_btn;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox cnic_txtbox;
+        private System.Windows.Forms.Label PatCNIC_lbl;
+        private System.Windows.Forms.Button ViewRprt_btn;
     }
 }
