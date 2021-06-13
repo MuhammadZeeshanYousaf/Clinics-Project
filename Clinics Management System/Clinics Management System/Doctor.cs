@@ -19,11 +19,13 @@ namespace Clinics_Management_System
         public Doctor(string dr_id, string doctorName, SqlConnection conn)
         {
             InitializeComponent();
+            //populate data members for the specific doctor
             DoctorName = doctorName;
             Doctor_name_label.Text = DoctorName;
             connection = conn;
             doctor_id = dr_id;
-
+            //To perform automatically refresh the appoointments
+            refresh_btn.PerformClick();
         }
 
         private void unchecked_btn_Click(object sender, EventArgs e)
@@ -149,6 +151,11 @@ namespace Clinics_Management_System
         private void checked_pat_btn_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void checked_pat_btn_Click_1(object sender, EventArgs e)
+        {
+            new Checked_pat(doctor_id, connection).Show();
         }
     }
 }

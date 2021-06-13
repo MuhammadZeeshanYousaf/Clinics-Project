@@ -45,6 +45,17 @@
     <None Include="ClinicsDatabaseDataSet.xss">
       <DependentUpon>ClinicsDatabaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ClinicsDatabaseDataSet1.xsc">
+      <DependentUpon>ClinicsDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ClinicsDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClinicsDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClinicsDatabaseDataSet1.xss">
+      <DependentUpon>ClinicsDatabaseDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -57,10 +68,21 @@
     <Compile Include="App_Login.Designer.cs">
       <DependentUpon>App_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Checked_pat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checked_pat.Designer.cs">
+      <DependentUpon>Checked_pat.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClinicsDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ClinicsDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicsDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicsDatabaseDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DctrAppoint.cs">
       <SubType>Form</SubType>
@@ -139,6 +161,9 @@
   <ItemGroup>
     <EmbeddedResource Include="App_Login.resx">
       <DependentUpon>App_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checked_pat.resx">
+      <DependentUpon>Checked_pat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DctrAppoint.resx">
       <DependentUpon>DctrAppoint.cs</DependentUpon>
